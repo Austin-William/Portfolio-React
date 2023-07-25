@@ -1,0 +1,33 @@
+@use "./variables.scss" as *;
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+@font-face {
+    font-family: 'Courier';
+    src: local('Courier'), url(//assets/fonts/CourierPrime-Regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: local('Courier'), url(//assets/fonts/Proxima_Nova-Regular.otf) format('otf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    // font-family: 'Courier', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}

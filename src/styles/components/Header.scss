@@ -1,0 +1,135 @@
+@use "../variables.scss" as *;
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5) fixed;
+    background-size: 500% 500%;
+    animation: gradient 15s ease infinite;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: $font-color;
+            margin-bottom: 20px;
+
+            overflow: hidden;
+            border-right: .15em solid $secondary-color;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+
+            .title__main {
+                .title__name {
+                    color: $tertiary-color;
+                    padding: 0 8px;
+                }
+            }
+        }
+
+        .start {
+            position: absolute;
+            bottom: 30px;
+
+            .button {
+                position: relative;
+
+                .arrow-down {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    margin-left: -12px;
+                    border-left: 1px solid $secondary-color;
+                    border-bottom: 1px solid $secondary-color;
+                    transform: rotate(-45deg);
+                    animation: boucing-arrow 2s infinite;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: $secondary-color;
+    }
+}
+
+@keyframes boucing-arrow {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .header {
+        .container {
+            .title {
+                font-size: 5vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        .container {
+            .title {
+                font-size: 1.4em
+            }
+        }
+    }
+}
