@@ -17,7 +17,7 @@ function Contact() {
 
         if (form.current) {
             emailjs.sendForm('service_wi4h6q8', 'template_8p6jo17', form.current, 'SB6_UVf6UIbXxT2N1')
-                .then((result) => {
+                .then(() => {
                     toast.success('Email sent successfully!', {
                         position: "bottom-center",
                         autoClose: 5000,
@@ -28,7 +28,7 @@ function Contact() {
                         progress: undefined,
                         theme: "dark",
                     });
-                }, (error) => {
+                }, () => {
                     toast.error('Something went wrong, please try again later!', {
                         position: "bottom-center",
                         autoClose: 5000,
@@ -52,35 +52,39 @@ function Contact() {
 
     return (
         <div className='contact' id="contact">
-            <div className='animation a1 contact__title'>
+            <div className='animation a1 contact__title' data-aos="fade-up" data-aos-duration="1000">
                 <h1>Feel free to contact me!</h1>
             </div>
             <div className='container'>
                 <ul className='left'>
                     {
                         words.map((word, index) => (
-                            <li key={index} className='animation a2'>
-                                <GoCheckCircle className='contact__icon' />
-                                <span>{word}</span>
-                            </li>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <li key={index} className='animation a2'>
+                                    <GoCheckCircle className='contact__icon' />
+                                    <span>{word}</span>
+                                </li>
+                            </div>
                         ))
                     }
                 </ul>
                 <div className='right'>
                     <form className='contact__form' ref={form} onSubmit={sendEmail}>
-                        <div className='contact__input'>
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
                             <label className='animation a2' htmlFor="email">Email</label>
                             <input className='animation a3' type="email" name="email" id="email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} />
                         </div>
-                        <div className='contact__input'>
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
                             <label className='animation a4' htmlFor="name">Name</label>
                             <input className='animation a5' type='text' name="name" id="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
                         </div>
-                        <div className='contact__input'>
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
                             <label className='animation a6' htmlFor="message">Message</label>
                             <textarea className='animation a7' name="message" id="message" placeholder="Your message" onChange={(e) => setMessage(e.target.value)} />
                         </div>
-                        <input className='animation a6 contact__submit__button' type="submit" value="Send" disabled={email === '' || name === '' || message === ''} />
+                        <div data-aos="fade-up" data-aos-duration="1500">
+                            <input className='animation a6 contact__submit__button' type="submit" value="Send" disabled={email === '' || name === '' || message === ''} />
+                        </div>
                     </form>
                 </div>
             </div>

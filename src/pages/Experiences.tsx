@@ -63,16 +63,16 @@ function Experiences() {
     return (
         <div className='experiences' id='experiences'>
             <div className='container'>
-                <h1 className='experiences__title'>
+                <h1 className='experiences__title' data-aos="fade-up" data-aos-duration="1000">
                     Experiences
                 </h1>
-                <h4 className='experiences__description'>
+                <h4 className='experiences__description' data-aos="fade-up" data-aos-duration="1000">
                     Here are some of my experiences. You can click on the cards to see more details.
                 </h4>
                 {
                     experiences.map((experience) => {
                         return (
-                            <details className='card' key={experience.id}>
+                            <details className='card' key={experience.id} data-aos="fade-up" data-aos-duration="1000">
                                 <summary className='card__header'>
                                     <div className='card__header__title'>
                                         <h1 className='card__header__title__name'>

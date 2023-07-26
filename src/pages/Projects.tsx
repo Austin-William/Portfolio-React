@@ -116,7 +116,7 @@ function Projects() {
                     {
                         projects.map((project) => {
                             return (
-                                <div className="checkbox" key={project.id}>
+                                <div className="checkbox" key={project.id} data-aos="fade-up" data-aos-duration="1000">
                                     <label className="checkbox-wrapper">
                                         <input type="checkbox" className="checkbox-input" id={`project-${project.id}`} name={project.name} checked={id === project.id} onChange={() => setId(project.id)} />
                                         <span className="checkbox-tile">
@@ -135,11 +135,11 @@ function Projects() {
                 </div>
                 <div className='right__side'>
                     <div className='right__side__content'>
-                        <span className='project__name'>{projects[id - 1].name}</span>
-                        <div className='project__description__box'>
+                        <span className='project__name' data-aos="fade-up" data-aos-duration="1000">{projects[id - 1].name}</span>
+                        <div className='project__description__box' data-aos="fade-up" data-aos-duration="1000">
                             <span className='project__description'>{projects[id - 1].description}</span>
                         </div>
-                        <ul className='project__info'>
+                        <ul className='project__info' data-aos="fade-up" data-aos-duration="1000">
                             <li>
                                 <span className='project__info__title'><strong>Members</strong> : {projects[id - 1].nb_members}</span>
                             </li>
@@ -147,7 +147,7 @@ function Projects() {
                                 <span className='project__info__title'><strong>Duration</strong> : {projects[id - 1].duration}</span>
                             </li>
                         </ul>
-                        <div className='project__link_button__box'>
+                        <div className='project__link_button__box' data-aos="fade-up" data-aos-duration="1000">
                             {
                                 projects[id - 1].url !== "" &&
                                 <a href={projects[id - 1].url} target='_blank' rel='noreferrer' className='project__link_button'>
@@ -158,17 +158,19 @@ function Projects() {
                                 <span className='project__url'>Github</span>
                             </a>
                         </div>
-                        <AliceCarousel
-                            items={projects[id - 1].screenshots.map((screenshot) => {
-                                return (
-                                    <img className='project__screenshot' src={screenshot} alt={projects[id - 1].name} />
-                                )
-                            }
-                            )}
-                            activeIndex={0}
-                            autoPlay={false}
-                            controlsStrategy="alternate"
-                        />
+                        <div data-aos="fade-up" data-aos-duration="1000">
+                            <AliceCarousel
+                                items={projects[id - 1].screenshots.map((screenshot) => {
+                                    return (
+                                        <img className='project__screenshot' src={screenshot} alt={projects[id - 1].name} />
+                                    )
+                                }
+                                )}
+                                activeIndex={0}
+                                autoPlay={false}
+                                controlsStrategy="alternate"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
