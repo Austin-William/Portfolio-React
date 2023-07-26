@@ -89,6 +89,23 @@ function Projects() {
                 "/assets/projects/redditech/5.png",
             ],
         },
+        {
+            id: 5,
+            name: "Successfull Story",
+            description: "A game made in Javascript which the end will depend on the user's choices (School project)",
+            url: "",
+            github: "https://github.com/Austin-William/JAM-Epitech-2022",
+            image: "/assets/projects/logos/game_jam_2022_logo.PNG",
+            nb_members: 3,
+            duration: "2 days",
+            screenshots: [
+                "/assets/projects/game_jam_2022/1.PNG",
+                "/assets/projects/game_jam_2022/2.PNG",
+                "/assets/projects/game_jam_2022/3.PNG",
+                "/assets/projects/game_jam_2022/4.PNG",
+                "/assets/projects/game_jam_2022/5.PNG",
+            ],
+        }
     ];
 
     return (
