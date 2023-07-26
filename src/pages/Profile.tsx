@@ -25,10 +25,10 @@ function Profile() {
                 </div>
                 <div className='profile__social'>
                     <a className='profile__social__link' href='https://github.com/Austin-William?tab=repositories' target='_blank' rel='noreferrer'>
-                            <img src='/assets/icons/github.png' alt='github' />
+                            <img src='assets/icons/github.png' alt='github' />
                     </a>
                     <a className='profile__social__link' href='https://www.linkedin.com/in/austin-william-lo-2a75271a1/' target='_blank' rel='noreferrer'>
-                        <img src='/assets/icons/linkedin.png' alt='linkedin' />
+                        <img src='assets/icons/linkedin.png' alt='linkedin' />
                     </a>
                     <a className='profile__social__link' href="mailto:austin-william.lo@epitech.eu">
                         <span className='mail__icon'>
