@@ -7,7 +7,7 @@ function Profile() {
     return (
         <div id='profile' className="profile">
             <div className='container'>
-                <div className='profile__image' data-aos="fade-up" data-aos-duration="1000">
+                <div className='profile__image' data-aos="fade-up" data-aos-duration="1500">
                     <img src='https://avatars.githubusercontent.com/u/55129304?v=4' alt='Austin-William' />
                 </div>
                 <div className='profile__title'>

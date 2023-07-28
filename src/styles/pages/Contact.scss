@@ -153,20 +153,26 @@
                     }
                 }
 
-                .contact__submit__button {
-                    padding: 10px 16px;
-                    border-radius: 4px;
-                    border: none;
-                    background: linear-gradient(65deg, $secondary-color 0%, $color-background-1 150%);
-                    color: $font-color-light;
-                    font-size: 1rem;
-                    font-weight: 500;
-                    box-shadow: 0 0 10px rgba($shadow-color, 0.2);
-                    cursor: pointer;
-                    transition: .3s;
+                .contact__submit {
+                    width: 100%;
+                    padding: 1.5rem 0;
 
-                    &:hover {
-                        box-shadow: 0 0 10px rgba($shadow-color, 1);
+                    .contact__submit__button {
+                        width: 100%;
+                        padding: 10px 16px;
+                        border-radius: 4px;
+                        border: none;
+                        background: linear-gradient(65deg, $secondary-color 0%, $color-background-1 150%);
+                        color: $font-color-light;
+                        font-size: 1rem;
+                        font-weight: 500;
+                        box-shadow: 0 0 10px rgba($shadow-color, 0.2);
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover {
+                            box-shadow: 0 0 10px rgba($shadow-color, 1);
+                        }
                     }
                 }
             }
