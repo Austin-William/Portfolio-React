@@ -19,8 +19,8 @@
             width: 30vw;
             max-width: 500px;
             min-width: 350px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.439);
-            background: linear-gradient(45deg, $color-background-1, $primary-color, $tertiary-color, $secondary-color);
+            box-shadow: 0 0 10px rgba($shadow-color, 0.439);
+            background: linear-gradient(45deg, $secondary-color 0%, $color-background-2, $color-background-3 70%, $color-background-4, $color-background-5);
             background-size: 200% 200%;
             background-position: 0% 0%;
             transition: 0.5s;

@@ -5,137 +5,326 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:
-        url(https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY5MDIxNDE4OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600) center / cover no-repeat fixed;
 
     .container {
         width: 90vw;
-        max-width: 1000px;
+        max-width: 1300px;
         padding: 2rem 0;
+        min-height: 80vh;
+        height: 100%;
 
         .experiences__title {
             font-size: 2rem;
             font-weight: 700;
-            color: $secondary-color;
-            text-decoration: underline;
+            letter-spacing: .15em;
+            background-clip: text;
+            background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+            background-size: 100% 100%;
+            background-position: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .experiences__description {
             font-size: 1.1rem;
             font-weight: 600;
-            color: $secondary-color;
+            color: $font-color;
+            border-left: rgb(126, 126, 126) 3px solid;
+            margin-left: 0;
+            padding: 0.5rem 0 0.5rem 0.8rem;
         }
 
-        summary::before {
-            transition: .25s transform ease;
-        }
-
-        details[open]>summary::before {
-            transform: rotate(90deg);
-        }
-
-        .card {
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             height: 100%;
-            padding: 0.8rem 2rem;
-            margin: 1rem 0;
-            border: 1px solid rgba(255, 255, 255, .25);
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.45);
-            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(15px);
-            transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
-            transition-property: margin, background;
 
-            &:hover {
-                cursor: pointer;
-            }
-
-            .card__header {
+            .screen {
+                min-height: calc(75vh - 200px);
+                height: 100%;
+                width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
                 align-items: center;
+                justify-content: space-evenly;
+                background: rgba(0, 0, 0, 0.5);
+                border: 1px solid rgba(92, 92, 92, 0.25);
+                border-radius: 10px;
+                background-color: rgba(1, 1, 1, 0.45);
+                box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
+                backdrop-filter: blur(15px);
 
-                .card__header__title {
-                    .card__header__title__name {
-                        font-size: 1.5rem;
-                        font-weight: 700;
-                        color: $secondary-color;
-                    }
+                .screen__right {
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
 
-                    .card__header__title__type {
-                        font-size: 1rem;
-                        font-weight: 500;
-                        color: $secondary-color;
-                    }
-                }
+                    .tabs {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.5rem;
 
-                .card__header__year {
-                    font-size: 1rem;
-                    font-weight: 400;
-                    color: $secondary-color;
-                }
-            }
+                        .checkbox__wrapper {
+                            background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+                            background-position: 0% 50%;
+                            background-size: 300% 300%;
+                            border-radius: 10px;
+                            padding: 1px;
+                            transition: all 0.15s ease;
 
-            .card__body {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                gap: 0.7rem 0;
+                            &:hover {
+                                animation: gradient 5s ease infinite;
+                                box-shadow: 0 5px 10px rgba($shadow-color, 0.9);
+                            }
 
-                summary {
-                    padding: 10px 20px;
-                    font-weight: 600;
-                    transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
-                    transition-property: margin, background;
+                            .checkbox__input {
+                                clip: rect(0 0 0 0);
+                                clip-path: inset(100%);
+                                height: 1px;
+                                overflow: hidden;
+                                position: absolute;
+                                white-space: nowrap;
+                                width: 1px;
 
-                    &:hover {
-                        background: rgba(black, 0.1);
-                        cursor: pointer;
-                    }
-                }
+                                &:checked+.checkbox__tile {
+                                    border-color: $font-color-light;
+                                    box-shadow: 0 5px 10px rgba(rgb(80, 80, 80), 0.3);
 
-                .card__body__description {
-                    .card__body__description__text {
-                        font-size: 1rem;
-                        font-weight: 400;
-                        color: $secondary-color;
-                    }
-                }
+                                    .checkbox__icon,
+                                    .checkbox__label {
+                                        color: $font-color-light;
+                                    }
+                                }
+                            }
 
-                .card__body__technologies {
-                    width: 100%;
+                            .checkbox__tile {
+                                background-color: $background-color;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                width: 120px;
+                                height: 60px;
+                                border-radius: 10px;
+                                box-shadow: 0 5px 10px rgba($shadow-color, 0.7);
+                                transition: 0.15s ease;
+                                cursor: pointer;
+                                position: relative;
 
-                    .card__body__technologies__title {
-                        font-size: 1rem;
-                        font-weight: 600;
-                        color: $secondary-color;
-                    }
-
-                    .card__body__technologies__list {
-                        .card__body__technologies__list__item {
-                            font-size: 1rem;
-                            font-weight: 400;
-                            color: $secondary-color;
+                                .checkbox__label__box {
+                                    .checkbox__label {
+                                        color: $font-color-not-selected;
+                                        transition: .375s ease;
+                                        letter-spacing: .1em;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
 
-                .card__body__missions {
-                    width: 100%;
+                .screen__left {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    height: 100%;
+                    padding: 1rem;
+                    gap: 2rem;
+                    width: 50%;
+                    position: relative;
 
-                    .card__body__missions__title {
-                        font-size: 1rem;
-                        font-weight: 600;
-                        color: $secondary-color;
+                    .screen__content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        height: 100%;
+                        width: 100%;
+                        gap: 2rem;
+
+
+                        .screen__content__title__wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            gap: 1.5rem;
+
+                            .caret {
+                                overflow: hidden;
+                                border-right: .15em solid $secondary-color;
+                                animation: blink-caret .75s step-end infinite;
+                            }
+
+                            .screen__content__title {
+                                .screen__content__title__text {
+                                    font-size: 2rem;
+                                    font-weight: 700;
+                                    color: $font-color
+                                }
+                            }
+
+                            .screen__content__description {
+                                .screen__content__description__text {
+                                    font-size: 1.1rem;
+                                    font-weight: 600;
+                                    color: $font-color;
+                                }
+                            }
+                        }
+
+                        .screen__content__missions {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: space-evenly;
+                            gap: 2.5rem;
+
+                            .screen__content__mission {
+                                border-radius: 10px;
+                                background-color: rgba(1, 1, 1, 0.45);
+                                box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
+                                backdrop-filter: blur(15px);
+                                gap: 1rem;
+                                padding: 1rem;
+                                border-left: 4px solid transparent;
+                                transition: 0.15s ease;
+
+                                .screen__content__mission__text {
+                                    font-size: 1.1rem;
+                                    font-weight: 600;
+                                    color: $font-color;
+                                }
+
+                                &:hover {
+                                    border-left: 4px solid $color-background-4;
+                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
+                                    backdrop-filter: blur(15px);
+                                    transform: scale(1.02);
+                                }
+                            }
+                        }
+
+                        .screen__content__technologies {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1rem;
+
+                            .screen__content__technology {
+                                padding: 1rem;
+                                width: 100%;
+                                text-align: center;
+                                position: relative;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 2px;
+                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.429);
+                                    height: 0%;
+                                    background-color: $font-color;
+                                    transition: 0.35s ease-out;
+                                }
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    width: 2px;
+                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.429);
+                                    height: 0%;
+                                    background-color: $font-color;
+                                    transition: 0.35s ease-out;
+                                }
+
+                                &:hover {
+                                    &:not(:hover) {
+                                        opacity: 0.5;
+                                    }
+
+                                    &::before,
+                                    &::after {
+                                        height: 100%;
+                                    }
+                                }
+
+                                .screen__content__technology__text {
+                                    font-size: 2rem;
+                                    font-weight: 600;
+                                    color: transparent;
+                                    text-shadow: 10px 0 20px rgba(48, 48, 48, 0.72);
+                                    -webkit-text-stroke: 1px $font-color;
+                                    transition: 0.35s ease-out;
+
+                                    &:hover {
+                                        color: $font-color;
+                                        text-shadow: 10px 0 20px rgba(48, 48, 48, 0.72);
+                                        -webkit-text-stroke: 1px $font-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                padding: 5em 0;
+
+                .checkbox__wrapper {
+                    transition: all 0.15s ease;
+                    padding: 0.5rem;
+
+                    &:hover {
+                        text-shadow: 0 0 10px rgba(48, 48, 48, 0.85);
                     }
 
-                    .card__body__missions__list {
-                        .card__body__missions__list__item {
-                            font-size: 1rem;
-                            font-weight: 400;
-                            color: $secondary-color;
+                    .checkbox__input {
+                        clip: rect(0 0 0 0);
+                        clip-path: inset(100%);
+                        height: 1px;
+                        position: absolute;
+                        width: 1px;
+
+                        &:checked+.checkbox__tile {
+                            .checkbox__label {
+                                color: $font-color-light;
+                            }
+                        }
+                    }
+
+                    .checkbox__tile {
+                        transition: 0.15s ease;
+                        cursor: pointer;
+                        position: relative;
+
+                        .checkbox__label__box {
+                            .checkbox__label {
+                                color: $font-color-not-selected;
+                                transition: .375s ease;
+                                letter-spacing: 0.7em;
+                            }
                         }
                     }
                 }
@@ -144,68 +333,78 @@
     }
 }
 
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: $secondary-color;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .experiences {
         .container {
+            .body {
+                .screen {
+                    flex-direction: column-reverse;
+                    justify-content: flex-end;
+                    gap: 2rem;
+                    padding: 2rem 1rem;
 
-            .experiences__description {
-                font-size: 1rem;
-            }
+                    .screen__right {
+                        width: 100%;
 
-            .card {
-                padding: 0.4rem 1rem;
-                margin: 1rem 0;
+                        .tabs {
+                            flex-direction: row;
+                            gap: 1rem;
 
-                .card__header {
-                    .card__header__title {
-                        .card__header__title__name {
-                            font-size: 1.2rem;
-                        }
+                            .checkbox__wrapper {
+                                .checkbox__tile {
+                                    width: 100px;
+                                    height: 50px;
 
-                        .card__header__title__type {
-                            font-size: 0.8rem;
-                        }
-                    }
-
-                    .card__header__year {
-                        font-size: 0.8rem;
-                    }
-                }
-
-                .card__body {
-                    summary {
-                        font-size: 0.8rem;
-                        padding: 5px 10px;
-                    }
-
-                    .card__body__description {
-                        .card__body__description__text {
-                            font-size: 0.8rem;
-                        }
-                    }
-
-                    .card__body__technologies {
-                        .card__body__technologies__title {
-                            font-size: 0.8rem;
-                        }
-
-                        .card__body__technologies__list {
-                            .card__body__technologies__list__item {
-                                font-size: 0.8rem;
+                                    .checkbox__label__box {
+                                        .checkbox__label {
+                                            font-size: 0.75rem;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
 
-                    .card__body__missions {
-                        .card__body__missions__title {
-                            font-size: 0.8rem;
-                        }
-
-                        .card__body__missions__list {
-                            .card__body__missions__list__item {
-                                font-size: 0.8rem;
-                            }
-                        }
+                    .screen__left {
+                        width: 90%;
                     }
                 }
             }

@@ -8,187 +8,234 @@
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
+    color: $font-color-light;
 
     .container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem 0;
         min-height: 30vh;
-        gap: 0 5vw;
+        height: 100%;
         width: 90vw;
 
-        .left__side {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            gap: 1rem 0;
+        .projects__title {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            background-clip: text;
+            background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+            background-size: 500% 200%;
+            background-position: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 7px;
+        }
 
-            .checkbox-input {
-                clip: rect(0 0 0 0);
-                clip-path: inset(100%);
-                height: 1px;
-                overflow: hidden;
-                position: absolute;
-                white-space: nowrap;
-                width: 1px;
+        .projects__description {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $font-color;
+            text-align: center;
+            letter-spacing: 5px;
+            margin-bottom: 2rem;
 
-                &:checked+.checkbox-tile {
-                    border-color: $tertiary-color;
-                    box-shadow: 0 5px 10px rgba(#000, 0.1);
-
-                    .checkbox-icon,
-                    .checkbox-label {
-                        color: $secondary-color;
-                    }
-                }
+            &::before {
+                content: '─';
+                margin-right: 0.6em;
             }
 
-            .checkbox-tile {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0 0.5rem;
-                width: 150px;
-                height: 60px;
-                border-radius: 10px;
-                border: 2px solid $quaternary-color;
-                box-shadow: 0 5px 10px rgba(black, 0.1);
-                transition: 0.15s ease;
-                cursor: pointer;
-                position: relative;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: 1.25rem;
-                    height: 1.25rem;
-                    border: 2px solid $quaternary-color;
-                    border-radius: 50%;
-                    top: 0.25rem;
-                    left: 0.25rem;
-                    opacity: 0;
-                    transform: scale(0);
-                    transition: 0.25s ease;
-                    background-size: 5px;
-                    background-repeat: no-repeat;
-                    background-position: 50% 50%;
-                }
-            }
-
-            .checkbox-icon {
-                margin-left: 3px;
-                display: flex;
-                justify-content: center;
-
-                img {
-                    width: 40px;
-                    border-radius: 50%;
-                    height: auto;
-                    aspect-ratio: 1/1;
-                    object-fit: cover;
-                }
-
-            }
-
-            .checkbox-label__box {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .checkbox-label {
-                    color: $quaternary-color;
-                    transition: .375s ease;
-                }
+            &::after {
+                content: '─';
+                margin-left: 0.6em;
             }
         }
 
-        .right__side {
-            padding: 1rem;
+        .body {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            height: 100%;
+            gap: 0 5vw;
+            width: 100%;
 
-            .right__side__content {
+            .left__side {
                 display: flex;
                 flex-direction: column;
-                max-width: 60vw;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
                 gap: 1rem 0;
 
-                .project__name {
-                    color: $secondary-color;
-                    font-size: 1.5rem;
-                    font-weight: 700;
-                }
+                .checkbox__input {
+                    clip: rect(0 0 0 0);
+                    clip-path: inset(100%);
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute;
+                    white-space: nowrap;
+                    width: 1px;
 
-                .project__description__box {
-                    min-height: 45px;
+                    &:checked+.checkbox__tile {
+                        border-color: $color-background-1;
+                        box-shadow: 0 5px 10px rgba(#000, 0.1);
 
-                    .project__description {
-                        color: $secondary-color;
-                        font-size: 1rem;
-                        font-weight: 400;
+                        .checkbox__icon,
+                        .checkbox__label {
+                            color: $font-color;
+                        }
                     }
                 }
 
-                .project__info {
-                    li span strong {
-                        color: $tertiary-color;
-                        font-size: 1rem;
-                        font-weight: 600;
-                    }
-                }
-
-                .project__link_button__box {
-                    width: 100%;
+                .checkbox__tile {
                     display: flex;
                     flex-direction: row;
-                    justify-content: flex-start;
                     align-items: center;
-                    gap: 0 1rem;
-
-                    .project__link_button {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100px;
-                        height: 40px;
-                        border-radius: 10px;
-                        border: 1px solid $quaternary-color;
-                        box-shadow: 0 5px 10px rgba(black, 0.1);
-                        transition: 0.15s ease;
-                        cursor: pointer;
-                        position: relative;
-                        text-decoration: none;
-
-                        &:hover {
-                            border-color: $tertiary-color;
-                            box-shadow: 0 5px 10px rgba(#000, 0.1);
-
-                            .project__url {
-                                color: $secondary-color;
-                            }
-                        }
-
-                        .project__url {
-                            color: $tertiary-color;
-                            font-size: 1rem;
-                            font-weight: 400;
-                            transition: .375s ease;
-                        }
-                    }
+                    gap: 0 0.5rem;
+                    width: 150px;
+                    height: 60px;
+                    border-radius: 10px;
+                    color: $font-color-not-selected;
+                    border: 1px solid $color-background-2;
+                    box-shadow: 0 5px 10px rgba($shadow-color, 0.5);
+                    transition: 0.15s ease;
+                    cursor: pointer;
+                    position: relative;
+                    transition: all 0.5 ease;
                 }
 
-                .alice-carousel__stage {
-                    height: 600px;
-                    width: 100%;
-                    margin-bottom: 3vh;
+                .checkbox__icon {
+                    margin-left: 3px;
+                    display: flex;
+                    justify-content: center;
 
-                    .project__screenshot {
+                    img {
+                        width: 40px;
+                        border-radius: 50%;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .checkbox__label__box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .checkbox__label {
+                        transition: .375s ease;
+                    }
+                }
+            }
+
+            .right__side {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+
+                .right__side__content {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 60vw;
+                    gap: 1rem 0;
+
+                    .project__name {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        letter-spacing: .15em;
+                        background-clip: text;
+                        color: transparent;
+                        background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+                        background-size: 300% auto;
+                        background-position: center;
+                        -webkit-background-clip: text;
+                    }
+
+                    .project__description__box {
+                        min-height: 45px;
+
+                        .project__description {
+                            font-size: 1rem;
+                            font-weight: 400;
+                            text-align: left;
+                            letter-spacing: 3px;
+                            word-spacing: 2px;
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    .project__info {
+                        li {
+                            span {
+                                font-size: 1rem;
+                                font-weight: 600;
+                                letter-spacing: 3px;
+                                word-spacing: 3px;
+
+                                strong {
+                                    letter-spacing: 2.5px;
+                                    word-spacing: 2px;
+                                    color: $font-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .project__link_button__box {
                         width: 100%;
-                        aspect-ratio: 16/9;
-                        object-fit: contain;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0 1rem;
+
+                        .project__link_button {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100px;
+                            height: 40px;
+                            border-radius: 10px;
+                            border: 1px solid $color-background-3;
+                            box-shadow: 0 5px 10px rgba($shadow-color, 0.1);
+                            transition: 0.15s ease;
+                            cursor: pointer;
+                            position: relative;
+                            text-decoration: none;
+                            letter-spacing: 3px;
+
+                            &:hover {
+                                box-shadow: 0 5px 10px rgba($shadow-color, 0.6);
+                                transform: translateY(-2px);
+                                border: 1px solid $color-background-5;
+
+                                .project__url {
+                                    color: $font-color-light
+                                }
+                            }
+
+                            .project__url {
+                                color: $font-color;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                transition: .375s ease;
+                            }
+                        }
+                    }
+
+                    .alice-carousel__stage {
+                        height: 600px;
+                        width: 100%;
+                        margin-bottom: 3vh;
+
+                        .project__screenshot {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                            object-fit: contain;
+                        }
                     }
                 }
             }
@@ -199,77 +246,78 @@
 @media screen and (max-width: 768px) {
     .projects {
         .container {
-            flex-direction: column;
-            gap: 3vh 0;
-            max-height: none;
-            margin-top: 5rem;
+            .body {
+                flex-direction: column;
+                gap: 3vh 0;
+                max-height: none;
+                margin-top: 5rem;
 
-            .left__side {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 1rem;
+                .left__side {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 1rem;
 
-                .checkbox-tile {
-                    width: 100px;
-                    height: 40px;
+                    .checkbox__tile {
 
-                    &:before {
-                        width: 0.75rem;
-                        height: 0.75rem;
-                        top: 0.125rem;
-                        left: 0.125rem;
-                    }
-                }
-
-                .checkbox-icon {
-                    img {
-                        width: 30px;
-                    }
-                }
-
-                .checkbox-label__box {
-                    .checkbox-label {
-                        font-size: 0.75rem;
-                    }
-                }
-            }
-
-            .right__side {
-                padding: 0;
-                .right__side__content {
-                    max-width: 100vw;
-
-                    .project__name {
-                        font-size: 1.25rem;
-                    }
-
-                    .project__description__box {
-                        .project__description {
-                            font-size: 0.75rem;
+                        &:before {
+                            width: 0.75rem;
+                            height: 0.75rem;
+                            top: 0.125rem;
+                            left: 0.125rem;
                         }
                     }
 
-                    .project__info {
-                        li span strong {
-                            font-size: 0.75rem;
+                    .checkbox__icon {
+                        img {
+                            width: 30px;
                         }
                     }
 
-                    .project__link_button__box {
-                        .project__link_button {
-                            width: 75px;
-                            height: 30px;
+                    .checkbox__label__box {
+                        .checkbox__label {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
 
-                            .project__url {
+                .right__side {
+                    padding: 0;
+
+                    .right__side__content {
+                        max-width: 100vw;
+
+                        .project__name {
+                            font-size: 1.25rem;
+                        }
+
+                        .project__description__box {
+                            .project__description {
                                 font-size: 0.75rem;
                             }
                         }
-                    }
 
-                    .alice-carousel__stage {
-                        height: 200px;
+                        .project__info {
+                            li span strong {
+                                font-size: 0.75rem;
+                            }
+                        }
+
+                        .project__link_button__box {
+                            .project__link_button {
+                                width: 75px;
+                                height: 30px;
+
+                                .project__url {
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+
+                        .alice-carousel__stage {
+                            height: 200px;
+                        }
                     }
                 }
             }

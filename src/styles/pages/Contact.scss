@@ -9,13 +9,19 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    color: $font-color;
 
     .contact__title {
         font-size: 1.2rem;
         font-weight: 700;
         margin-bottom: 1rem;
         text-align: center;
-        color: $secondary-color;
+        background: linear-gradient(to right, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+        background-position: 150% 100%;
+        background-size: 450% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .container {
@@ -65,7 +71,6 @@
             font-size: 1rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: $secondary-color;
         }
 
         .left {
@@ -77,32 +82,32 @@
             width: 100%;
             min-width: 200px;
             max-width: 250px;
+            gap: 1rem;
 
             li {
                 margin-bottom: 1rem;
                 font-size: 1rem;
                 font-weight: 500;
-                color: $secondary-color;
                 display: flex;
                 align-items: center;
                 gap: 1rem;
 
                 .contact__icon {
                     font-size: 2rem;
-                    color: green;
+                    color: $valid-color;
                 }
             }
         }
 
         .right {
-            border-left: 1px solid $secondary-color;
-            padding: 2rem;
+            padding: 2rem 0 2rem 5rem;
+            height: fit-content;
             width: 35%;
-            max-width: 500px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            border-left: 1px solid $font-color-light;
 
             .contact__form {
                 height: 100%;
@@ -110,7 +115,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: flex-start;
+                align-items: center;
                 gap: 1.4rem;
 
                 .contact__input {
@@ -121,13 +126,12 @@
                     label {
                         font-size: 1rem;
                         font-weight: 500;
-                        color: $secondary-color;
                         margin-bottom: .5rem;
+                        letter-spacing: 2px;
                     }
 
                     input,
                     textarea {
-                        width: 100%;
                         padding: 10px 16px;
                         border: 2px solid #ddd;
                         border-radius: 4px;
@@ -137,7 +141,7 @@
                         transition: .2s;
 
                         &:focus {
-                            border-color: $secondary-color;
+                            border-color: $color-background-2;
                         }
                     }
 
@@ -151,17 +155,18 @@
 
                 .contact__submit__button {
                     padding: 10px 16px;
-                    border: 1px solid $secondary-color;
                     border-radius: 4px;
-                    background-color: $secondary-color;
-                    color: #fff;
+                    border: none;
+                    background: linear-gradient(35deg, $secondary-color 0%, $color-background-1 150%);
+                    color: $font-color-light;
+                    font-size: 1rem;
                     font-weight: 500;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
                     cursor: pointer;
                     transition: .3s;
 
                     &:hover {
-                        background-color: white;
-                        color: $secondary-color;
+                        box-shadow: 0 0 10px rgba($shadow-color, 1);
                     }
                 }
             }
@@ -182,10 +187,11 @@
             }
 
             .right {
+                padding: 0;
                 width: 70vw;
                 max-width: none;
                 border-left: none;
-                border-top: 1px solid $secondary-color;
+                border-top: 1px solid $font-color-light;
                 padding-top: 2rem;
                 display: block;
 
@@ -197,10 +203,6 @@
 
                     .contact__input {
                         width: 100%;
-
-                        input, textarea {
-                            width: 90%;
-                        }
                     }
                 }
             }

@@ -11,15 +11,15 @@ function Profile() {
                     <img src='https://avatars.githubusercontent.com/u/55129304?v=4' alt='Austin-William' />
                 </div>
                 <div className='profile__title'>
-                    <h1 className='profile__title__name' data-aos="fade-up" data-aos-duration="1000">
-                        Austin-William
+                    <h1 className='profile__title__name' data-aos="fade-up" data-aos-duration="1500">
+                        Austin-William Lo
                     </h1>
-                    <h2 className='profile__title__description' data-aos="fade-up" data-aos-duration="1000">
-                        Web Developer
+                    <h2 className='profile__title__description' data-aos="fade-up" data-aos-duration="1500">
+                        A 5th year student at Epitech Paris
                     </h2>
                 </div>
                 <div className='profile__description'>
-                    <p className='profile__description__text' data-aos="fade-up" data-aos-duration="1000">
+                    <p className='profile__description__text' data-aos="fade-up" data-aos-duration="1500">
                         I'm a web developer based in France. I have a passion for web development and love to create new things. I'm always open to new opportunities!
                     </p>
                 </div>

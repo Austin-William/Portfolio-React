@@ -68,21 +68,21 @@ function Contact() {
                         ))
                     }
                 </ul>
-                <div className='right'>
+                <div className='right' data-aos="fade-right" data-aos-duration="1000">
                     <form className='contact__form' ref={form} onSubmit={sendEmail}>
-                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a2' htmlFor="email">Email</label>
                             <input className='animation a3' type="email" name="email" id="email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} />
                         </div>
-                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a4' htmlFor="name">Name</label>
                             <input className='animation a5' type='text' name="name" id="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
                         </div>
-                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1000">
+                        <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a6' htmlFor="message">Message</label>
                             <textarea className='animation a7' name="message" id="message" placeholder="Your message" onChange={(e) => setMessage(e.target.value)} />
                         </div>
-                        <div data-aos="fade-up" data-aos-duration="1500">
+                        <div data-aos="fade-up" data-aos-duration="2000">
                             <input className='animation a6 contact__submit__button' type="submit" value="Send" disabled={email === '' || name === '' || message === ''} />
                         </div>
                     </form>
