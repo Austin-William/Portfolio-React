@@ -133,7 +133,7 @@
                     input,
                     textarea {
                         padding: 10px 16px;
-                        border: 2px solid #ddd;
+                        border: 2px solid $font-color-light;
                         border-radius: 4px;
                         outline: 0;
                         word-spacing: 1px;
@@ -157,11 +157,11 @@
                     padding: 10px 16px;
                     border-radius: 4px;
                     border: none;
-                    background: linear-gradient(35deg, $secondary-color 0%, $color-background-1 150%);
+                    background: linear-gradient(65deg, $secondary-color 0%, $color-background-1 150%);
                     color: $font-color-light;
                     font-size: 1rem;
                     font-weight: 500;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+                    box-shadow: 0 0 10px rgba($shadow-color, 0.2);
                     cursor: pointer;
                     transition: .3s;
 
