@@ -34,8 +34,8 @@ function Experiences() {
             ],
             missions: [
                 "Redisign a home page regrouping some applications of the company for a better visual",
-                "Add new features to centralize different types of events (alerts, notifications, ...)",
-                "Added new user settings to filter application user permissions"
+                "Added new user settings to filter application user permissions",
+                "Add new features to centralize different types of events (alerts, notifications, ...)"
             ],
         },
         {
@@ -171,7 +171,7 @@ function Experiences() {
                     Experiences
                 </h1>
                 <h4 className='experiences__description' data-aos="fade-up" data-aos-duration="1000">
-                    Here are some of my experiences. You can click on the cards to see more details.
+                    Here are some of my experiences in companies big school projects that I done during my studies and helped me to improve my skills.
                 </h4>
                 <div className='body' data-aos="fade-up" data-aos-duration="1000">
                     <section className='screen'>

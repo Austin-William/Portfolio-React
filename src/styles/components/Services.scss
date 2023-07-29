@@ -1,0 +1,95 @@
+@use "../variables.scss" as *;
+
+$min-height-card: 10.5rem;
+$min-height-card-responsive: 100%;
+$border-radius-card: 15px;
+$gap-cards: 2rem;
+$padding-card-wrapper: 1px;
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5rem 0 0 0;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+        gap: $gap-cards;
+        min-height: $min-height-card;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            width: 20rem;
+            box-shadow: 0 0 20px 0 rgba($shadow-color, 0.3);
+            border-radius: $border-radius-card;
+            padding: $padding-card-wrapper;
+            background: linear-gradient(145deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+            transition: all 0.5s ease-in-out;
+
+            .wrapper {
+                border-radius: $border-radius-card;
+                height: $min-height-card;
+                background-color: rgba($background-color, 0.92);
+                padding: 1rem;
+                backdrop-filter: blur(15px);
+
+                .card__icon {
+                    font-size: 3rem;
+                    color: $font-color-light;
+                }
+
+                .card__title {
+                    font-size: 1.1rem;
+                    letter-spacing: 1.7px;
+                    color: $font-color-light;
+                }
+
+                .card__description {
+                    font-size: 0.75rem;
+                    letter-spacing: 2px;
+                    color: $font-color-light;
+                }
+            }
+
+            &:hover {
+                box-shadow: 0 0 20px 0 rgba($shadow-color, 0.6);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        .container {
+            .card {
+                width: 15rem;
+                min-height: $min-height-card-responsive;
+
+                .wrapper {
+                    height: 100%;
+                    .card__icon {
+                        font-size: 2.5rem;
+                    }
+
+                    .card__title {
+                        font-size: 1rem;
+                    }
+
+                    .card__description {
+                        font-size: 0.65rem;
+                    }
+                }
+            }
+        }
+    }
+}
