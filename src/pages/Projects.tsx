@@ -113,7 +113,7 @@ function Projects() {
             description: "A website to check the time in different cities. This app is built with ReactJS. (Personal project)",
             url: "https://austin-william.github.io/CheckTheTime/",
             github: "https://github.com/Austin-William/CheckTheTime",
-            image: "assets/projects/logos/check_the_time_logo.PNG",
+            image: "assets/projects/logos/check_the_time_logo.png",
             nb_members: 1,
             duration: "2 days",
             screenshots: [
