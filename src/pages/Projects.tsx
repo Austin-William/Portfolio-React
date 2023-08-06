@@ -92,7 +92,7 @@ function Projects() {
         {
             id: 5,
             name: "Telltale Game",
-            description: "A 'telltale' game made in Javascript which the end will depend on the user's choices (School project)",
+            description: "A story game made in Javascript which the end will depend on the user's choices (School project)",
             url: "https://austin-william.github.io/JAM-Epitech-2022/",
             github: "https://github.com/Austin-William/JAM-Epitech-2022",
             image: "assets/projects/logos/game_jam_2022_logo.PNG",
@@ -105,6 +105,20 @@ function Projects() {
                 "assets/projects/game_jam_2022/4.PNG",
                 "assets/projects/game_jam_2022/5.PNG",
                 "assets/projects/game_jam_2022/6.PNG",
+            ],
+        },
+        {
+            id: 6,
+            name: "Check The Time",
+            description: "A website to check the time in different cities. This app is built with ReactJS. (Personal project)",
+            url: "https://austin-william.github.io/CheckTheTime/",
+            github: "https://github.com/Austin-William/CheckTheTime",
+            image: "assets/projects/logos/check_the_time_logo.PNG",
+            nb_members: 1,
+            duration: "2 days",
+            screenshots: [
+                "assets/projects/check_the_time/1.PNG",
+                "assets/projects/check_the_time/2.PNG",
             ],
         }
     ];
