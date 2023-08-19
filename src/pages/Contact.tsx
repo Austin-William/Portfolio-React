@@ -70,8 +70,8 @@ function Contact() {
                 <ul className='left'>
                     {
                         words.map((word, index) => (
-                            <div data-aos="fade-up" data-aos-duration="1500">
-                                <li key={index} className='animation a2'>
+                            <div data-aos="fade-up" data-aos-duration="1500" key={index} >
+                                <li className='animation a2'>
                                     <GoCheckCircle className='contact__icon' />
                                     <span>{word}</span>
                                 </li>

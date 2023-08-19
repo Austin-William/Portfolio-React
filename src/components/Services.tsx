@@ -47,7 +47,7 @@ function Services() {
 
     return (
         <div className='services'>
-            <div className='container'>
+            <div className='cards__container'>
                 {services.map((service, index) => (
                     <div className='card' key={index} data-aos="fade-up" data-aos-duration="1500">
                         <div className='wrapper'>

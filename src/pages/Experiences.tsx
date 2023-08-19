@@ -85,7 +85,7 @@ function Experiences() {
         }, [currentIndex, props.delay, props.text, props.text.length]);
 
         return (
-            <span className={props.className}>
+            <span className={props.className}> 
                 {currentText}
             </span>
         )

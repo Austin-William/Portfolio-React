@@ -142,7 +142,7 @@ function Projects() {
                                             <input type="checkbox" className="checkbox__input" id={`project-${project.id}`} name={project.name} checked={id === project.id} onChange={() => setId(project.id)} />
                                             <span className="checkbox__tile">
                                                 <span className="checkbox__icon">
-                                                    <img src={project.image} alt={project.name} />
+                                                    <img src={require(`../${project.image}`)} alt={project.name} />
                                                 </span>
                                                 <div className='checkbox-label__box'>
                                                     <span className="checkbox__label">{project.name}</span>
@@ -183,7 +183,7 @@ function Projects() {
                                 <AliceCarousel
                                     items={projects[id - 1].screenshots.map((screenshot) => {
                                         return (
-                                            <img className='project__screenshot' src={screenshot} alt={projects[id - 1].name} />
+                                            <img className='project__screenshot' src={require(`../${screenshot}`)} alt={projects[id - 1].name} />
                                         )
                                     }
                                     )}

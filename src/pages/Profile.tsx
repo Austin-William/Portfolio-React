@@ -1,8 +1,9 @@
 import React from 'react';
 import { MdOutlineMail } from 'react-icons/md';
 
-import "../styles/pages/Profile.scss";
 import Services from '../components/Services';
+
+import "../styles/pages/Profile.scss";
 
 function Profile() {
     return (
@@ -26,10 +27,10 @@ function Profile() {
                 </div>
                 <div className='profile__social' data-aos="fade-up" data-aos-duration="1500">
                     <a className='profile__social__link' href='https://github.com/Austin-William?tab=repositories' target='_blank' rel='noreferrer'>
-                        <img src='assets/icons/github.png' alt='github' />
+                        <img src={require('../assets/icons/github.png')} alt='github' />
                     </a>
                     <a className='profile__social__link' href='https://www.linkedin.com/in/austin-william-lo-2a75271a1/' target='_blank' rel='noreferrer'>
-                        <img src='assets/icons/linkedin.png' alt='linkedin' />
+                        <img src={require('../assets/icons/linkedin.png')} alt='linkedin' />
                     </a>
                     <a className='profile__social__link' href="mailto:austin-william.lo@epitech.eu">
                         <span className='mail__icon'>
