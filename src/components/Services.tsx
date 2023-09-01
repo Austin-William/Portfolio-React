@@ -3,31 +3,12 @@ import { MdMobileFriendly, MdWeb } from 'react-icons/md';
 import { FaServer } from 'react-icons/fa';
 import { SiTestcafe } from 'react-icons/si';
 
+import { services } from '../data/data';
+
 import "../styles/components/Services.scss";
 
 function Services() {
-    const services = [
-        {
-            title: 'Web Development',
-            description: 'React.JS, AngularJS, HTML5 / CSS3 and Javascript / Typescript are my main skills for web development.',
-            icon: 'web'
-        },
-        {
-            title: 'Mobile Development',
-            description: 'Responsive websites and applications development for mobile devices with React Native and Flutter.',
-            icon: 'mobile'
-        },
-        {
-            title: 'Server Development',
-            description: 'NodeJS and ExpressJS are the languages I used the most for server development.',
-            icon: 'server'
-        },
-        {
-            title: 'Testing',
-            description: 'Unit testing and integration testing. I can test your application with Jest.',
-            icon: 'testing'
-        },
-    ]
+    
 
     function displayIcon(icon: string) {
         switch (icon) {

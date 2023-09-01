@@ -6,7 +6,7 @@ const projects = [
         url: "https://www.paperwork-fr.com",
         github: "https://github.com/Paperwork-EIP",
         image: "assets/projects/logos/paperwork_logo.png",
-        nb_members: 8,
+        nb_members: 7,
         duration: "2 years",
         screenshots: [
             "assets/projects/paperwork/1.PNG",
@@ -146,7 +146,7 @@ const experiences = [
             "SQLPAD",
         ],
         missions: [
-            "Redisign a home page regrouping some applications of the company for a better visual",
+            "Redesign a home page regrouping some applications of the company for a better visual",
             "Added new user settings to filter application user permissions",
             "Add new features to centralize different types of events (alerts, notifications, ...)"
         ],
@@ -174,4 +174,27 @@ const experiences = [
     },
 ];
 
-export { projects, experiences };
+const services = [
+    {
+        title: 'Web Development',
+        description: 'React.JS, AngularJS, HTML5 / CSS3 and Javascript / Typescript are my main skills.',
+        icon: 'web'
+    },
+    {
+        title: 'Mobile Development',
+        description: 'React Native and Flutter for applications development',
+        icon: 'mobile'
+    },
+    {
+        title: 'Server Development',
+        description: 'NodeJS and ExpressJS are the languages I used the most for server development.',
+        icon: 'server'
+    },
+    {
+        title: 'Testing',
+        description: 'Unit testing and integration testing with Jest.',
+        icon: 'testing'
+    },
+]
+
+export { projects, experiences, services };

@@ -110,7 +110,7 @@
                                 flex-direction: row;
                                 align-items: center;
                                 justify-content: center;
-                                width: 120px;
+                                width: clamp(100px, 15vw, 150px);
                                 height: 60px;
                                 border-radius: 10px;
                                 box-shadow: 0 5px 10px rgba($shadow-color, 0.7);
@@ -120,6 +120,7 @@
 
                                 .checkbox__label__box {
                                     .checkbox__label {
+                                        font-size: clamp(0.6rem, 0.8vw, 1.3rem);
                                         color: $font-color-not-selected;
                                         transition: .375s ease;
                                         letter-spacing: .1em;
@@ -289,7 +290,7 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                gap: 2rem;
+                gap: clamp(1rem, 2vw, 2rem);
                 padding: 5em 0;
 
                 .checkbox__wrapper {
@@ -321,6 +322,7 @@
 
                         .checkbox__label__box {
                             .checkbox__label {
+                                font: clamp(1rem, 1vw, 1.5rem) "Courier", sans-serif;
                                 color: $font-color-not-selected;
                                 transition: .375s ease;
                                 letter-spacing: 0.7em;
@@ -392,12 +394,6 @@
                                 .checkbox__tile {
                                     width: 100px;
                                     height: 50px;
-
-                                    .checkbox__label__box {
-                                        .checkbox__label {
-                                            font-size: 0.75rem;
-                                        }
-                                    }
                                 }
                             }
                         }
