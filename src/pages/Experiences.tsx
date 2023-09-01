@@ -1,65 +1,11 @@
 import React from 'react';
 
+import { experiences } from '../data/data';
+
 import "../styles/pages/Experiences.scss";
 
 function Experiences() {
-    const experiences = [
-        {
-            id: 1,
-            name: "Linagora",
-            type: "Internship",
-            description: "A website to create and manage different type of CV with different templates.",
-            year: "2020",
-            technologies: [
-                "React JS",
-                "Vue JS",
-                "HTML/CSS",
-            ],
-            missions: [
-                "Create design of the architecture of an online CV generator",
-                "Find the best technologies to use for the project",
-                "Create and develop of its interface as well as its functionalities",
-            ],
-        },
-        {
-            id: 2,
-            name: "Natixis",
-            type: "Internship",
-            description: "Redesign and add new features to a home page regrouping some applications of the company",
-            year: "2022",
-            technologies: [
-                "Angular JS",
-                "C#",
-                "SQLPAD",
-            ],
-            missions: [
-                "Redisign a home page regrouping some applications of the company for a better visual",
-                "Added new user settings to filter application user permissions",
-                "Add new features to centralize different types of events (alerts, notifications, ...)"
-            ],
-        },
-        {
-            id: 3,
-            name: "Paperwork",
-            type: "School project",
-            description: "A web app and a mobile app to help you to manage your french administrative paperworks.",
-            year: "2022 - 2024",
-            technologies: [
-                "React JS/Typescript",
-                "NodeJS",
-                "Flutter",
-                "React Native",
-                "AWS",
-            ],
-            missions: [
-                "Develop the welcome page, login and register screen in the web app with React Typescript/SCSS",
-                "Develop the mobile app with React Native",
-                "Develop a part of the logic of the server with NodeJs",
-                "Develop the tests for the front-end, back-end and mobile app",
-                "Help to develop the mobile app with Flutter and the back-end with NodeJs"
-            ],
-        },
-    ];
+    
     const [currentExperience, setCurrentExperience] = React.useState(experiences[0]);
     const [activeTypeEffectDescription, setActiveTypeEffectDescription] = React.useState(false);
     const [tab, setTab] = React.useState('title');
