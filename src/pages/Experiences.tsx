@@ -150,7 +150,7 @@ function Experiences() {
                                     <input type="radio" className="checkbox__input" id="technologies" name="tab-control" onChange={() => changeTab('technologies')} />
                                     <span className="checkbox__tile">
                                         <div className='checkbox__label__box'>
-                                            <span className="checkbox__label">Technologies</span>
+                                            <span className="checkbox__label">Techs</span>
                                         </div>
                                     </span>
                                 </label>
