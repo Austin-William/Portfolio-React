@@ -176,18 +176,18 @@ const experiences = [
 
 const services = [
     {
-        title: 'Web Development',
-        description: 'React.JS, AngularJS, HTML5 / CSS3 and Javascript / Typescript are my main skills.',
+        title: 'Front',
+        description: 'React.JS, AngularJS, HTML5 / CSS3 and JS / TS are my main skills.',
         icon: 'web'
     },
     {
-        title: 'Mobile Development',
-        description: 'React Native and Flutter for applications development',
+        title: 'Mobile',
+        description: 'React Native and Flutter.',
         icon: 'mobile'
     },
     {
-        title: 'Server Development',
-        description: 'NodeJS and ExpressJS are the languages I used the most for server development.',
+        title: 'Server',
+        description: 'NodeJS, ExpressJS, JSTL and Java.',
         icon: 'server'
     },
     {

@@ -10,8 +10,7 @@
         width: 90vw;
         max-width: 1300px;
         padding: 2rem 0;
-        min-height: 80vh;
-        height: 100%;
+        margin-bottom: 2vh;
 
         .experiences__title {
             font-size: 2rem;
@@ -34,373 +33,115 @@
             padding: 0.5rem 0 0.5rem 0.8rem;
         }
 
-        .body {
+        .experiences__body {
+            color: $font-color;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 2.5rem;
+            margin-top: 3rem;
 
-            .screen {
-                min-height: calc(75vh - 200px);
-                height: 100%;
-                width: 100%;
+            &__selects {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-evenly;
-                background: rgba(0, 0, 0, 0.5);
-                border: 1px solid rgba(92, 92, 92, 0.25);
-                border-radius: 10px;
-                background-color: rgba(1, 1, 1, 0.45);
-                box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
-                backdrop-filter: blur(15px);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: baseline;
+                gap: 1rem;
 
-                .screen__right {
-                    height: 100%;
+                &__title {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    letter-spacing: .15em;
+                }
+
+                &__buttons {
                     display: flex;
+                    flex-direction: row;
                     flex-wrap: wrap;
-                    flex-direction: column;
                     align-items: center;
-                    justify-content: center;
-
-                    .tabs {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 1.5rem;
-
-                        .checkbox__wrapper {
-                            background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
-                            background-position: 0% 50%;
-                            background-size: 300% 300%;
-                            border-radius: 10px;
-                            padding: 1px;
-                            transition: all 0.15s ease;
-
-                            &:hover {
-                                animation: gradient 5s ease infinite;
-                                box-shadow: 0 5px 10px rgba($shadow-color, 0.9);
-                            }
-
-                            .checkbox__input {
-                                clip: rect(0 0 0 0);
-                                clip-path: inset(100%);
-                                height: 1px;
-                                overflow: hidden;
-                                position: absolute;
-                                white-space: nowrap;
-                                width: 1px;
-
-                                &:checked+.checkbox__tile {
-                                    border-color: $font-color-light;
-                                    box-shadow: 0 5px 10px rgba(rgb(80, 80, 80), 0.3);
-
-                                    .checkbox__icon,
-                                    .checkbox__label {
-                                        color: $font-color-light;
-                                    }
-                                }
-                            }
-
-                            .checkbox__tile {
-                                background-color: $background-color;
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                justify-content: center;
-                                width: clamp(100px, 15vw, 150px);
-                                height: 60px;
-                                border-radius: 10px;
-                                box-shadow: 0 5px 10px rgba($shadow-color, 0.7);
-                                transition: 0.15s ease;
-                                cursor: pointer;
-                                position: relative;
-
-                                .checkbox__label__box {
-                                    .checkbox__label {
-                                        font-size: clamp(0.6rem, 0.8vw, 1.3rem);
-                                        color: $font-color-not-selected;
-                                        transition: .375s ease;
-                                        letter-spacing: .1em;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .screen__left {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
                     justify-content: flex-start;
-                    height: 100%;
-                    padding: 1rem;
-                    gap: 2rem;
-                    width: 50%;
-                    position: relative;
+                    gap: 1rem;
 
-                    .screen__content {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-                        height: 100%;
-                        width: 100%;
-                        gap: 2rem;
-
-
-                        .screen__content__title__wrapper {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            justify-content: flex-start;
-                            gap: 1.5rem;
-
-                            .caret {
-                                overflow: hidden;
-                                border-right: .15em solid $secondary-color;
-                                animation: blink-caret .75s step-end infinite;
-                            }
-
-                            .screen__content__title {
-                                .screen__content__title__text {
-                                    font-size: 2rem;
-                                    font-weight: 700;
-                                    color: $font-color
-                                }
-                            }
-
-                            .screen__content__description {
-                                .screen__content__description__text {
-                                    font-size: 1.1rem;
-                                    font-weight: 600;
-                                    color: $font-color;
-                                }
-                            }
-                        }
-
-                        .screen__content__missions {
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            justify-content: space-evenly;
-                            gap: 2.5rem;
-
-                            .screen__content__mission {
-                                border-radius: 10px;
-                                background-color: rgba(1, 1, 1, 0.45);
-                                box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
-                                backdrop-filter: blur(15px);
-                                gap: 1rem;
-                                padding: 1rem;
-                                border-left: 4px solid transparent;
-                                transition: 0.15s ease;
-
-                                .screen__content__mission__text {
-                                    font-size: 1.1rem;
-                                    font-weight: 600;
-                                    color: $font-color;
-                                }
-
-                                &:hover {
-                                    border-left: 4px solid $color-background-4;
-                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.72);
-                                    backdrop-filter: blur(15px);
-                                    transform: scale(1.02);
-                                }
-                            }
-                        }
-
-                        .screen__content__technologies {
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 1rem;
-
-                            .screen__content__technology {
-                                padding: 1rem;
-                                width: 100%;
-                                text-align: center;
-                                position: relative;
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 2px;
-                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.429);
-                                    height: 0%;
-                                    background-color: $font-color;
-                                    transition: 0.35s ease-out;
-                                }
-
-                                &::after {
-                                    content: "";
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    width: 2px;
-                                    box-shadow: 0 0 10px 1px rgba(48, 48, 48, 0.429);
-                                    height: 0%;
-                                    background-color: $font-color;
-                                    transition: 0.35s ease-out;
-                                }
-
-                                &:hover {
-                                    &:not(:hover) {
-                                        opacity: 0.5;
-                                    }
-
-                                    &::before,
-                                    &::after {
-                                        height: 100%;
-                                    }
-                                }
-
-                                .screen__content__technology__text {
-                                    font-size: 2rem;
-                                    font-weight: 600;
-                                    color: transparent;
-                                    text-shadow: 10px 0 20px rgba(48, 48, 48, 0.72);
-                                    -webkit-text-stroke: 1px $font-color;
-                                    transition: 0.35s ease-out;
-
-                                    &:hover {
-                                        color: $font-color;
-                                        text-shadow: 10px 0 20px rgba(48, 48, 48, 0.72);
-                                        -webkit-text-stroke: 1px $font-color;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .buttons {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: clamp(1rem, 2vw, 2rem);
-                padding: 5em 0;
-
-                .checkbox__wrapper {
-                    transition: all 0.15s ease;
-                    padding: 0.5rem;
-
-                    &:hover {
-                        text-shadow: 0 0 10px rgba(48, 48, 48, 0.85);
-                    }
-
-                    .checkbox__input {
-                        clip: rect(0 0 0 0);
-                        clip-path: inset(100%);
-                        height: 1px;
-                        position: absolute;
-                        width: 1px;
-
-                        &:checked+.checkbox__tile {
-                            .checkbox__label {
-                                color: $font-color-light;
-                            }
-                        }
-                    }
-
-                    .checkbox__tile {
-                        transition: 0.15s ease;
+                    &__button {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        padding: 0.5rem 1rem;
+                        border: 1px solid;
+                        border-radius: 5px;
+                        border-color: $color-background-4;
+                        background-color: transparent;
+                        color: $font-color-not-selected;
                         cursor: pointer;
-                        position: relative;
+                        transition: all 0.3s ease;
 
-                        .checkbox__label__box {
-                            .checkbox__label {
-                                font: clamp(1rem, 1vw, 1.5rem) "Courier", sans-serif;
-                                color: $font-color-not-selected;
-                                transition: .375s ease;
-                                letter-spacing: 0.7em;
-                            }
+                        &.selected {
+                            background-color: $color-background-5;
+                            color: $font-color-light;
+                        }
+
+                        &:hover {
+                            background-color: $color-background-3;
                         }
                     }
                 }
             }
-        }
-    }
-}
 
-@keyframes blink-caret {
+            &__selected__experience {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
 
-    from,
-    to {
-        border-color: transparent
-    }
+                &__title {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: .15em;
+                    background-clip: text;
+                    background: linear-gradient(35deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5);
+                    background-size: 360% 250%;
+                    background-position: center;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
 
-    50% {
-        border-color: $secondary-color;
-    }
-}
+                &__description {
+                    font-size: 0.9rem;
+                    color: $font-color;
+                    border-left: rgb(126, 126, 126) 1px solid;
+                    margin-left: 0;
+                    padding: 0.5rem 0 0.5rem 0.8rem;
+                }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+                &__list__tasks {
+                    padding-left: 50px;
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes show {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .experiences {
-        .container {
-            .body {
-                .screen {
-                    flex-direction: column-reverse;
-                    justify-content: flex-end;
-                    gap: 2rem;
-                    padding: 2rem 1rem;
-
-                    .screen__right {
-                        width: 100%;
-
-                        .tabs {
-                            flex-direction: row;
-                            gap: 1rem;
-
-                            .checkbox__wrapper {
-                                .checkbox__tile {
-                                    width: 100px;
-                                    height: 50px;
-                                }
-                            }
+                    &__task {
+                        &:nth-child(odd):before {
+                            border-color: $quaternary-color;
                         }
-                    }
 
-                    .screen__left {
-                        width: 90%;
+                        &:nth-child(even):before {
+                            border-color: $secondary-color;
+                        }
+
+                        padding-left: 16px;
+                        margin-top: 24px;
+                        position: relative;
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-bottom: 3rem;
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            height: 42px;
+                            width: 42px;
+                            border-radius: 50%;
+                            border: 2px solid white;
+                            position: absolute;
+                            top: -13px;
+                            left: -46px;
+                        }
                     }
                 }
             }

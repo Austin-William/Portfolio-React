@@ -2,6 +2,7 @@
 
 $min-height-card: 10.5rem;
 $min-height-card-responsive: 100%;
+$width-card-content: 90%;
 $border-radius-card: 15px;
 $gap-cards: 2rem;
 $padding-card-wrapper: 1px;
@@ -39,6 +40,7 @@ $padding-card-wrapper: 1px;
             .wrapper {
                 border-radius: $border-radius-card;
                 height: $min-height-card;
+                width: $width-card-content;
                 background-color: rgba($background-color-2, 0.95);
                 padding: 1rem;
                 backdrop-filter: blur(15px);
