@@ -120,7 +120,6 @@ const experiences = [
     {
         id: 1,
         name: "Linagora",
-        type: "Internship",
         description: "A website to create and manage different type of CV with different templates.",
         year: "2020",
         technologies: [
@@ -137,7 +136,6 @@ const experiences = [
     {
         id: 2,
         name: "Natixis",
-        type: "Internship",
         description: "Redesign and add new features to a home page regrouping some applications of the company",
         year: "2022",
         technologies: [
@@ -154,7 +152,6 @@ const experiences = [
     {
         id: 3,
         name: "Paperwork",
-        type: "School project",
         description: "A web app and a mobile app to help you to manage your french administrative paperworks.",
         year: "2022 - 2024",
         technologies: [
@@ -172,6 +169,31 @@ const experiences = [
             "Help to develop the mobile app with Flutter and the back-end with NodeJs"
         ],
     },
+    {
+        id: 4,
+        name: "Ecocea Technologies - Manutan",
+        description: "An E-commerce website to sell products for companies.",
+        year: "2023 - now",
+        technologies: [
+            "Javascript",
+            "JSTL",
+            "Java",
+            "Less",
+            "HCL Commerce",
+            "Bootstrap",
+            "Jira"
+        ],
+        missions: [
+            "Maintain the e-commerce website",
+            "Develop new features",
+            "Rework the website to improve the performance and the design",
+            "Report the bugs and fix them",
+            "Demonstrate the website to the client and explain the new features to him",
+            "Implement tracking tools to monitor the website's performance and the user's behavior",
+            "Create the documentation to maintain and to develop the website for developers",
+            "Contact the client to know his needs and his feedback about the website"
+        ],
+    }
 ];
 
 const services = [

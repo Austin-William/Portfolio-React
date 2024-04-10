@@ -35,7 +35,7 @@ function Experiences() {
                     </div>
                     <div className='experiences__body__selected__experience'>
                         <div className='experiences__body__selected__experience__title' data-aos="fade-up" data-aos-duration="1000">
-                            {experiences[indexSelectedExperience].name} - {experiences[indexSelectedExperience].type}
+                            {experiences[indexSelectedExperience].name}
                         </div>
                         <div className='experiences__body__selected__experience__description' data-aos="fade-up" data-aos-duration="1000">
                             {experiences[indexSelectedExperience].description}
