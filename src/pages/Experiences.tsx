@@ -42,7 +42,7 @@ function Experiences() {
                         </div>
                         <ol className='experiences__body__selected__experience__list__tasks'>
                             {experiences[indexSelectedExperience].missions.map((task: string, index: number) => (
-                                <li key={index} className='experiences__body__selected__experience__list__tasks__task' data-aos="fade-up" data-aos-duration="1000">
+                                <li key={index} className='experiences__body__selected__experience__list__tasks__task' data-aos="fade-right" data-aos-duration="1000">
                                     {task}
                                 </li>
                             ))}

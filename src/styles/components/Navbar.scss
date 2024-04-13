@@ -74,10 +74,14 @@
     .navbar {
         .container {
             .box {
-                width: 80vw;
-                min-width: 250px;
+                width: 100vw;
+                min-width: 0;
+                max-width: none;
+                text-align: center;
 
                 .links {
+                    gap: 10px;
+                    flex-wrap: wrap;
                     .link {
                         font-size: 0.7rem;
                     }

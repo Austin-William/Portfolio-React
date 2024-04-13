@@ -12,9 +12,9 @@ function Header() {
                     <h1 className='title'>
                         <span className='title__main'>
                             Hello, I'm
-                            <span className='title__name'>
+                            <strong className='title__name'>
                                 {name}
-                            </span>
+                            </strong>
                             !
                         </span>
                     </h1>
