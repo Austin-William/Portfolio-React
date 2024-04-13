@@ -141,19 +141,16 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 768px) {
     .profile {
         .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 1vh 0;
-
+            .profile__image {
+                img {
+                    width: 200px;
+                }
+            }
             .profile__social {
-                justify-content: center;
-                align-items: center;
+                gap: 0 0.5rem;
             }
         }
     }

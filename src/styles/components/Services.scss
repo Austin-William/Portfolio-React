@@ -70,25 +70,22 @@ $padding-card-wrapper: 1px;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .services {
-        .container {
+        .cards__container {
             .card {
                 width: 15rem;
                 min-height: $min-height-card-responsive;
 
                 .wrapper {
-                    height: 100%;
+                    width: 86.5%;
+
                     .card__icon {
                         font-size: 2.5rem;
                     }
 
                     .card__title {
                         font-size: 1rem;
-                    }
-
-                    .card__description {
-                        font-size: 0.65rem;
                     }
                 }
             }
