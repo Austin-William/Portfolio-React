@@ -18,6 +18,19 @@ const projects = [
             "assets/projects/paperwork/7.PNG",
             "assets/projects/paperwork/8.PNG",
         ],
+        technologies: [
+            "ReactJS",
+            "Typescript",
+            "NodeJS",
+            "PostgreSQL",
+            "HTML 5",
+            "SCSS",
+            "Docker",
+            "Jest",
+            "AWS",
+            "Flutter",
+            "React Native",
+        ]
     },
     {
         id: 2,
@@ -45,6 +58,18 @@ const projects = [
             "assets/projects/area/14.PNG",
             "assets/projects/area/15.PNG",
         ],
+        technologies: [
+            "ReactJS",
+            "NodeJS",
+            "ExpressJS",
+            "Firebase",
+            "HTML 5",
+            "SCSS",
+            "Typescript",
+            "Docker",
+            "Jest",
+            "APIs (Unsplash, Twitter, ...)"
+        ]
     },
     {
         id: 3,
@@ -64,6 +89,13 @@ const projects = [
             "assets/projects/dashboard/6.png",
             "assets/projects/dashboard/7.png",
         ],
+        technologies: [
+            "ReactJS",
+            "HTML 5",
+            "CSS 3",
+            "Javascript",
+            "APIs (Weather, Reddit, ...)"
+        ]
     },
     {
         id: 4,
@@ -81,6 +113,10 @@ const projects = [
             "assets/projects/redditech/4.png",
             "assets/projects/redditech/5.png",
         ],
+        technologies: [
+            "Flutter",
+            "Reddit API"
+        ]
     },
     {
         id: 5,
@@ -99,6 +135,12 @@ const projects = [
             "assets/projects/game_jam_2022/5.PNG",
             "assets/projects/game_jam_2022/6.PNG",
         ],
+        technologies: [
+            "ReactJS",
+            "HTML 5",
+            "SCSS",
+            "Javascript"
+        ]
     },
     {
         id: 6,
@@ -113,6 +155,52 @@ const projects = [
             "assets/projects/check_the_time/1.PNG",
             "assets/projects/check_the_time/2.PNG",
         ],
+        technologies: [
+            "ReactJS",
+            "HTML 5",
+            "SCSS",
+            "Javascript"
+        ]
+    },
+    {
+        id: 7,
+        name: "Portfolio in Next.JS",
+        description: "Inspired from a video, this project is a portfolio made with NextJS to learn this technology. (Personal project)",
+        url: "https://nextjsportfolio-gold.vercel.app/",
+        github: "https://github.com/Austin-William/nextjs_portfolio",
+        image: "assets/projects/logos/nextjs.png",
+        nb_members: 1,
+        duration: "5 days",
+        screenshots: [
+            "assets/projects/portfolio_nextjs/1.png",
+            "assets/projects/portfolio_nextjs/2.png",
+            "assets/projects/portfolio_nextjs/3.png",
+            "assets/projects/portfolio_nextjs/4.png",
+            "assets/projects/portfolio_nextjs/5.png"
+        ],
+        technologies: [
+            "Next.JS",
+            "TailwindCSS",
+            "Typescript"
+        ]
+    },
+    {
+        id: 8,
+        name: "Food Wheel",
+        description: "My first Next.JS project. (Personal project)",
+        url: "https://food-wheel-henna.vercel.app/",
+        github: "https://github.com/Austin-William/Food-Wheel",
+        image: "assets/projects/logos/food_wheel_logo.png",
+        nb_members: 1,
+        duration: "2 days",
+        screenshots: [
+            "assets/projects/food_wheel/1.png"
+        ],
+        technologies: [
+            "Next.JS",
+            "TailwindCSS",
+            "Typescript"
+        ]
     }
 ];
 
@@ -123,9 +211,12 @@ const experiences = [
         description: "A website to create and manage different type of CV with different templates.",
         year: "2020",
         technologies: [
-            "React JS",
-            "Vue JS",
-            "HTML/CSS",
+            "ReactJS",
+            "VueJS",
+            "HTML 5",
+            "CSS 3",
+            "Javascript",
+            "Firebase"
         ],
         missions: [
             "Create design of the architecture of an online CV generator",
@@ -139,13 +230,18 @@ const experiences = [
         description: "Redesign and add new features to a home page regrouping some applications of the company",
         year: "2022",
         technologies: [
-            "Angular JS",
+            "AngularJS",
+            "Javascript",
             "C#",
-            "SQLPAD",
+            ".NET",
+            "HTML 5",
+            "CSS 3",
+            "SQL Server",
+            "Confluence"
         ],
         missions: [
             "Redesign a home page regrouping some applications of the company for a better visual",
-            "Added new user settings to filter application user permissions",
+            "Add new user settings to filter application user permissions",
             "Add new features to centralize different types of events (alerts, notifications, ...)"
         ],
     },
@@ -155,18 +251,26 @@ const experiences = [
         description: "A web app and a mobile app to help you to manage your french administrative paperworks.",
         year: "2022 - 2024",
         technologies: [
-            "React JS/Typescript",
+            "ReactJS",
+            "Typescript",
+            "HTML 5",
+            "SCSS",
             "NodeJS",
             "Flutter",
             "React Native",
             "AWS",
+            "Docker",
+            "Jest",
+            "PostgreSQL"
         ],
         missions: [
             "Develop the welcome page, login and register screen in the web app with React Typescript/SCSS",
             "Develop the mobile app with React Native",
             "Develop a part of the logic of the server with NodeJs",
             "Develop the tests for the front-end, back-end and mobile app",
-            "Help to develop the mobile app with Flutter and the back-end with NodeJs"
+            "Help to develop the mobile app with Flutter and the back-end with NodeJs",
+            "Testing the app to find the bugs and to ensure the quality of the app with Jest",
+            "Deployement of the app on AWS",
         ],
     },
     {
@@ -176,11 +280,13 @@ const experiences = [
         year: "2023 - now",
         technologies: [
             "Javascript",
+            "HTML 5",
+            "CSS 3",
             "JSTL",
             "Java",
             "Less",
-            "HCL Commerce",
-            "Bootstrap",
+            "HCL Commerce 8",
+            "Bootstrap 3",
             "Jira"
         ],
         missions: [
@@ -191,7 +297,7 @@ const experiences = [
             "Demonstrate the website to the client and explain the new features to him",
             "Implement tracking tools to monitor the website's performance and the user's behavior",
             "Create the documentation to maintain and to develop the website for developers",
-            "Contact the client to know his needs and his feedback about the website"
+            "Contact the client to understand his needs and his feedbacks about the website"
         ],
     }
 ];
@@ -199,7 +305,7 @@ const experiences = [
 const services = [
     {
         title: 'Front',
-        description: 'React.JS, AngularJS, HTML5 / CSS3 and JS / TS are my main skills.',
+        description: 'ReactJS, AngularJS, NextJS, HTML 5 / CSS 3 and Javascript / Typescript are my main skills.',
         icon: 'web'
     },
     {

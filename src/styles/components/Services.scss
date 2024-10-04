@@ -1,6 +1,6 @@
 @use "../variables.scss" as *;
 
-$min-height-card: 10.5rem;
+$min-height-card: 11rem;
 $min-height-card-responsive: 100%;
 $width-card-content: 90%;
 $border-radius-card: 15px;
@@ -13,7 +13,7 @@ $padding-card-wrapper: 1px;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 5rem 0 0 0;
+    padding: 32px 0 0 0;
 
     .cards__container {
         display: flex;

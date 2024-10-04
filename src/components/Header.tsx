@@ -3,7 +3,7 @@ import React from 'react';
 import "../styles/components/Header.scss";
 
 function Header() {
-    const name = "Austin-William";
+    const name = "Austin";
 
     return (
         <header className="header">

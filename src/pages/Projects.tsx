@@ -1,12 +1,85 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 
+import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs, FaVuejs, FaAngular, FaAws, FaDocker, FaJava, FaBootstrap, FaJira } from 'react-icons/fa';
+import { SiFirebase, SiTailwindcss, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiConfluence, SiTypescript, SiSass, SiFlutter, SiJest, SiPostgresql, SiLess, SiHcl } from 'react-icons/si';
+import { TbBrandReactNative, TbBrandNextjs  } from "react-icons/tb";
+
 import { projects } from '../data/data';
 
 import "../styles/pages/Projects.scss";
 
 function Projects() {
     const [id, setId] = React.useState(1);
+
+    function displayTechIcons(technology: string) {
+        switch (technology) {
+            case 'ReactJS':
+                return <FaReact />;
+            case 'Next.JS':
+                return <TbBrandNextjs />;
+            case 'React Native':
+                return <TbBrandReactNative />;
+            case 'AngularJS':
+                return <FaAngular />;
+            case 'NodeJS':
+                return <FaNodeJs />;
+            case 'HTML 5':
+                return <FaHtml5 />;
+            case 'CSS 3':
+                return <FaCss3 />;
+            case 'TailwindCSS':
+                return <SiTailwindcss />;
+            case 'SCSS':
+                return <SiSass />;
+            case 'Javascript':
+                return <FaJs />;
+            case 'Typescript':
+                return <SiTypescript />;
+            case 'VueJS':
+                return <FaVuejs />;
+            case 'Firebase':
+                return <SiFirebase />;
+            case 'C#':
+                return <SiCsharp />;
+            case '.NET':
+                return <SiDotnet />;
+            case 'SQL Server':
+                return <SiMicrosoftsqlserver />;
+            case 'Confluence':
+                return <SiConfluence />;
+            case 'Jira':
+                return <FaJira />;
+            case 'Flutter':
+                return <SiFlutter />;
+            case 'AWS':
+                return <FaAws />;
+            case 'Docker':
+                return <FaDocker />;
+            case 'Jest':
+                return <SiJest />;
+            case 'PostgreSQL':
+                return <SiPostgresql />;
+            case 'Java':
+                return <FaJava />;
+            case 'JSTL':
+                return <FaJava />;
+            case 'Less':
+                return <SiLess />;
+            case 'HCL Commerce':
+                return <SiHcl />;
+            case 'HCL Commerce 8':
+                return <SiHcl />;
+            case 'Bootstrap':
+                return <FaBootstrap />;
+            case 'Bootstrap 3':
+                return <FaBootstrap />;
+            case 'Bootstrap 5':
+                return <FaBootstrap />;
+            default:
+                return <></>;
+        }
+    }
 
     return (
         <div id='projects' className="projects">
@@ -53,6 +126,20 @@ function Projects() {
                                     <span className='project__info__title'><strong>Duration</strong> : {projects[id - 1].duration}</span>
                                 </li>
                             </ul>
+                            <div className='project__technologies'>
+                                <div className='project__technologies__list' data-aos="fade-up" data-aos-duration="1000">
+                                    {projects[id - 1].technologies.map((technology: string, index: number) => (
+                                        <div key={index} className='project__technologies__item'>
+                                            <div className='project__technologies__item__icon'>
+                                                {displayTechIcons(technology)}
+                                            </div>
+                                            <div className='project__technologies__item__text'>
+                                                {technology}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                             <div className='project__link_button__box' data-aos="fade-up" data-aos-duration="1000">
                                 {
                                     projects[id - 1].url !== "" &&
