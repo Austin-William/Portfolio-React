@@ -35,32 +35,30 @@
             background-color: rgba(28, 28, 28, 0.45);
             box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(15px);
+            display: flex;
 
             .title {
-                width: 100%;
-                font-size: 2.5rem;
+                font-size: 48px;
                 font-weight: 700;
                 color: $font-color;
                 overflow: hidden;
-                border-right: .15em solid $secondary-color;
+                border-right: 3px solid $quaternary-color;
                 margin: 0 auto;
-                letter-spacing: .15em;
-                text-align: center;
+                letter-spacing: 3px;
+                white-space: nowrap;
+                overflow: hidden;
                 animation:
                     typing 3.5s steps(40, end),
                     blink-caret .75s step-end infinite;
 
-                .title__main {
-                    .title__name {
-                        color: transparent;
-                        background: linear-gradient(-45deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5) fixed;
-                        background-size: 400% 200%;
-                        background-clip: text;
-                        -moz-background-clip: text;
-                        -webkit-background-clip: text;
-                        animation: gradient 10s ease infinite;
-                        padding: 0 8px 0 12px;
-                    }
+                &__name {
+                    color: transparent;
+                    background: linear-gradient(-45deg, $color-background-1, $color-background-2, $color-background-3, $color-background-4, $color-background-5) fixed;
+                    background-size: 400% 200%;
+                    background-clip: text;
+                    -moz-background-clip: text;
+                    -webkit-background-clip: text;
+                    animation: gradient 10s ease infinite;
                 }
             }
         }
@@ -79,8 +77,8 @@
                     width: 20px;
                     height: 20px;
                     margin-left: -12px;
-                    border-left: 1px solid $secondary-color;
-                    border-bottom: 1px solid $secondary-color;
+                    border-left: 1px solid $quaternary-color;
+                    border-bottom: 1px solid $quaternary-color;
                     transform: rotate(-45deg);
                     animation: boucing-arrow 2s infinite;
                     box-sizing: border-box;

@@ -19,6 +19,14 @@
         height: 100%;
         width: 90vw;
 
+        .projects__header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
         .projects__title {
             font-size: 2rem;
             font-weight: 700;
@@ -37,7 +45,6 @@
             color: $font-color;
             text-align: center;
             letter-spacing: 3px;
-            margin-bottom: 2rem;
 
             &::before {
                 content: '─';

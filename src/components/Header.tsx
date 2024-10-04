@@ -10,13 +10,11 @@ function Header() {
             <div className='container'>
                 <div className='box'>
                     <h1 className='title'>
-                        <span className='title__main'>
-                            Hello, I'm
-                            <strong className='title__name'>
-                                {name}
-                            </strong>
-                            !
-                        </span>
+                        Hello, I'm&nbsp;
+                        <strong className='title__name'>
+                            {name}
+                        </strong>
+                        &nbsp;!
                     </h1>
                 </div>
                 <div className="start">

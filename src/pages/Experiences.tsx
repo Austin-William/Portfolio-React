@@ -81,7 +81,7 @@ function Experiences() {
     }
 
     return (
-        <div className='experiences' id='experiences'>
+        <div id='experiences' className='experiences'>
             <div className='container'>
                 <h1 className='experiences__title' data-aos="fade-up" data-aos-duration="1000">
                     Experiences

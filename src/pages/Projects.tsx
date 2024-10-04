@@ -3,7 +3,7 @@ import AliceCarousel from 'react-alice-carousel';
 
 import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs, FaVuejs, FaAngular, FaAws, FaDocker, FaJava, FaBootstrap, FaJira } from 'react-icons/fa';
 import { SiFirebase, SiTailwindcss, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiConfluence, SiTypescript, SiSass, SiFlutter, SiJest, SiPostgresql, SiLess, SiHcl } from 'react-icons/si';
-import { TbBrandReactNative, TbBrandNextjs  } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandNextjs } from "react-icons/tb";
 
 import { projects } from '../data/data';
 
@@ -84,12 +84,14 @@ function Projects() {
     return (
         <div id='projects' className="projects">
             <div className='container'>
-                <h1 className='projects__title' data-aos="fade-up" data-aos-duration="1000">
-                    Projects
-                </h1>
-                <h4 className='projects__description' data-aos="fade-up" data-aos-duration="1000">
-                    I have worked on different projects, here are some of them.
-                </h4>
+                <div className='projects__header'>
+                    <h1 className='projects__title' data-aos="fade-up" data-aos-duration="1000">
+                        Projects
+                    </h1>
+                    <span className='projects__description' data-aos="fade-up" data-aos-duration="1000">
+                        I have worked on different projects, here are some of them.
+                    </span>
+                </div>
                 <div className='body'>
                     <div className='left__side'>
                         {
