@@ -159,7 +159,7 @@ const projects = [
             "ReactJS",
             "HTML 5",
             "SCSS",
-            "Javascript"
+            "Typescript"
         ]
     },
     {
@@ -200,6 +200,26 @@ const projects = [
             "Next.JS",
             "TailwindCSS",
             "Typescript"
+        ]
+    },
+    {
+        id: 9,
+        name: "Weather App",
+        description: "A weather app made with ReactJS and Weather API. (Personal project)",
+        url: "https://food-wheel-henna.vercel.app/",
+        github: "https://github.com/Austin-William/Food-Wheel",
+        image: "assets/projects/logos/weather_logo.png",
+        nb_members: 1,
+        duration: "1 week",
+        screenshots: [
+            "assets/projects/weather_app/1.png"
+        ],
+        technologies: [
+            "ReactJS",
+            "HTML 5",
+            "SCSS",
+            "Typescript",
+            "Weather API"
         ]
     }
 ];
