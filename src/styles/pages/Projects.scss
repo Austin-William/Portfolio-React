@@ -173,9 +173,14 @@
                     }
 
                     .project__info {
+                        margin: 0 0 1rem 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        
                         li {
                             span {
-                                font-size: 1rem;
+                                font-size: 16px;
                                 font-weight: 600;
                                 letter-spacing: 3px;
                                 word-spacing: 3px;
@@ -186,6 +191,14 @@
                                     color: $font-color;
                                 }
                             }
+                        }
+
+                        &__maintained--yes {
+                            color: $valid-color;
+                        }
+
+                        &__maintained--no {
+                            color: $invalid-color;
                         }
                     }
 

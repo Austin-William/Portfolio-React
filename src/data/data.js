@@ -2,12 +2,14 @@ const projects = [
     {
         id: 1,
         name: "Paperwork",
-        description: "An app to help to manage your french administrative paperworks, built with React Typescript, NodeJS, Flutter and AWS. A mobile application is available in Flutter and will be soon made with React Native. This app is still in development. (School project)",
+        description: "An app to help to manage your french administrative paperworks, built with React Typescript, NodeJS, Flutter and AWS. A mobile application is available in Flutter and will be soon made with React Native.",
         url: "https://www.paperwork-fr.com",
         github: "https://github.com/Paperwork-EIP",
         image: "assets/projects/logos/paperwork_logo.png",
         nb_members: 7,
         duration: "2 years",
+        type: "School project",
+        maintained: false,
         screenshots: [
             "assets/projects/paperwork/1.PNG",
             "assets/projects/paperwork/2.PNG",
@@ -35,12 +37,14 @@ const projects = [
     {
         id: 2,
         name: "Area",
-        description: "A web app to manage your different account in one app thanks to the API of the different services (Discord, Twitter, ...). This app is built with React JS, NodeJS/ExpressJS and Firebase. This app will not be updated anymore. (School project)",
+        description: "A web app to manage your different account in one app thanks to the API of the different services (Discord, Twitter, ...). This app is built with React JS, NodeJS/ExpressJS and Firebase.",
         url: "",
         github: "https://github.com/Austin-William/Area",
         image: "assets/projects/logos/area_logo.jpg",
         nb_members: 6,
         duration: "2 months",
+        type: "School project",
+        maintained: false,
         screenshots: [
             "assets/projects/area/1.PNG",
             "assets/projects/area/2.PNG",
@@ -74,12 +78,14 @@ const projects = [
     {
         id: 3,
         name: "Dashboard",
-        description: "A web app to display 6 different widgets (weather, Twitter, Reddit, Youtube, Github and Unsplash API). This app is built with React JS/Bootstrap and Firebase. This app will not be updated anymore. (School project)",
+        description: "A web app to display 6 different widgets (weather, Twitter, Reddit, Youtube, Github and Unsplash API). This app is built with React JS/Bootstrap and Firebase.",
         url: "",
         github: "https://github.com/Austin-William/Dashboard-API",
         image: "assets/projects/logos/dashboard_logo.jpg",
         nb_members: 2,
         duration: "4 weeks",
+        type: "School project",
+        maintained: false,
         screenshots: [
             "assets/projects/dashboard/1.png",
             "assets/projects/dashboard/2.png",
@@ -100,12 +106,14 @@ const projects = [
     {
         id: 4,
         name: "Redditech",
-        description: "A mobile application using Reddit API. This app is built with Flutter. This app will not be updated anymore. (School project)",
+        description: "A mobile application using Reddit API. This app is built with Flutter.",
         url: "",
         github: "https://github.com/Austin-William/Redditech",
         image: "assets/projects/logos/reddit_logo.png",
         nb_members: 2,
         duration: "4 weeks",
+        type: "School project",
+        maintained: false,
         screenshots: [
             "assets/projects/redditech/1.png",
             "assets/projects/redditech/2.png",
@@ -121,12 +129,14 @@ const projects = [
     {
         id: 5,
         name: "Telltale Game",
-        description: "A story game made in Javascript which the end will depend on the user's choices (School project)",
+        description: "A story game made in Javascript which the end will depend on the user's choices. This game was made during a game jam.",
         url: "https://austin-william.github.io/JAM-Epitech-2022/",
         github: "https://github.com/Austin-William/JAM-Epitech-2022",
         image: "assets/projects/logos/game_jam_2022_logo.PNG",
         nb_members: 3,
         duration: "2 days",
+        type: "School project",
+        maintained: false,
         screenshots: [
             "assets/projects/game_jam_2022/1.PNG",
             "assets/projects/game_jam_2022/2.PNG",
@@ -145,12 +155,14 @@ const projects = [
     {
         id: 6,
         name: "Check The Time",
-        description: "A website to check the time in different cities. This app is built with ReactJS. (Personal project)",
+        description: "A website to check the time in different cities. This app is built with ReactJS.",
         url: "https://austin-william.github.io/CheckTheTime/",
         github: "https://github.com/Austin-William/CheckTheTime",
         image: "assets/projects/logos/check_the_time_logo.png",
         nb_members: 1,
         duration: "2 days",
+        type: "Personal project",
+        maintained: false,
         screenshots: [
             "assets/projects/check_the_time/1.PNG",
             "assets/projects/check_the_time/2.PNG",
@@ -165,12 +177,14 @@ const projects = [
     {
         id: 7,
         name: "Portfolio in Next.JS",
-        description: "Inspired from a video, this project is a portfolio made with NextJS to learn this technology. (Personal project)",
+        description: "Inspired from a video, this project is a portfolio made with NextJS to learn this technology.",
         url: "https://nextjsportfolio-gold.vercel.app/",
         github: "https://github.com/Austin-William/nextjs_portfolio",
         image: "assets/projects/logos/nextjs.png",
         nb_members: 1,
         duration: "5 days",
+        type: "Personal project",
+        maintained: false,
         screenshots: [
             "assets/projects/portfolio_nextjs/1.png",
             "assets/projects/portfolio_nextjs/2.png",
@@ -187,12 +201,14 @@ const projects = [
     {
         id: 8,
         name: "Food Wheel",
-        description: "My first Next.JS project. (Personal project)",
+        description: "My first Next.JS project.",
         url: "https://food-wheel-henna.vercel.app/",
         github: "https://github.com/Austin-William/Food-Wheel",
         image: "assets/projects/logos/food_wheel_logo.png",
         nb_members: 1,
         duration: "2 days",
+        type: "Personal project",
+        maintained: false,
         screenshots: [
             "assets/projects/food_wheel/1.png"
         ],
@@ -205,12 +221,14 @@ const projects = [
     {
         id: 9,
         name: "Weather App",
-        description: "A weather app made with ReactJS and Weather API. (Personal project)",
+        description: "A weather app made with ReactJS and Weather API.",
         url: "https://austin-william.github.io/WhatIsTheWeatherLikeToday/",
         github: "https://github.com/Austin-William/WhatIsTheWeatherLikeToday",
         image: "assets/projects/logos/weather_logo.png",
         nb_members: 1,
         duration: "1 week",
+        type: "Personal project",
+        maintained: false,
         screenshots: [
             "assets/projects/weather_app/1.png"
         ],

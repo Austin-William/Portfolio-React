@@ -122,10 +122,21 @@ function Projects() {
                             </div>
                             <ul className='project__info' data-aos="fade-up" data-aos-duration="1000">
                                 <li>
-                                    <span className='project__info__title'><strong>Members</strong> : {projects[id - 1].nb_members}</span>
+                                    <span className='project__info__title'><strong>Member(s)</strong> : {projects[id - 1].nb_members}</span>
                                 </li>
                                 <li>
                                     <span className='project__info__title'><strong>Duration</strong> : {projects[id - 1].duration}</span>
+                                </li>
+                                <li>
+                                    <span className='project__info__title'><strong>Type</strong> : {projects[id - 1].type}</span>
+                                </li>
+                                <li>
+                                    <span className='project__info__title'><strong>Maintained</strong> : {
+                                            projects[id - 1].maintained ? 
+                                            <span className='project__info__maintained project__info__maintained--yes'>Yes</span> : 
+                                            <span className='project__info__maintained project__info__maintained--no'>No</span>
+                                        }
+                                    </span>
                                 </li>
                             </ul>
                             <div className='project__technologies'>
