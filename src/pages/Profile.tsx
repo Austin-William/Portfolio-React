@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdOutlineMail } from 'react-icons/md';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Services from '../components/Services';
 
@@ -10,7 +11,11 @@ function Profile() {
         <div id='profile' className="profile">
             <div className='container'>
                 <div className='profile__image' data-aos="fade-up" data-aos-duration="1500">
-                    <img src='https://avatars.githubusercontent.com/u/55129304?v=4' alt='Austin-William' />
+                    <LazyLoadImage
+                        src='https://avatars.githubusercontent.com/u/55129304?v=4'
+                        alt='Austin-William'
+                        effect='blur'
+                    />
                 </div>
                 <div className='profile__title'>
                     <h1 className='profile__title__name' data-aos="fade-up" data-aos-duration="1500">
@@ -26,11 +31,11 @@ function Profile() {
                     </p>
                 </div>
                 <div className='profile__social' data-aos="fade-up" data-aos-duration="1500">
-                    <a className='profile__social__link' href='https://github.com/Austin-William?tab=repositories' target='_blank' rel='noreferrer'>
-                        <img src={require('../assets/icons/github.png')} alt='github' />
+                    <a className='profile__social__link' href='https://github.com/Austin-William' target='_blank' rel='noreferrer'>
+                        <img src={require('../assets/icons/github.png')} alt='github' loading='lazy' />
                     </a>
                     <a className='profile__social__link' href='https://www.linkedin.com/in/austin-william-lo-2a75271a1/' target='_blank' rel='noreferrer'>
-                        <img src={require('../assets/icons/linkedin.png')} alt='linkedin' />
+                        <img src={require('../assets/icons/linkedin.png')} alt='linkedin' loading='lazy' />
                     </a>
                     <a className='profile__social__link' href="mailto:austin-william.lo@epitech.eu">
                         <span className='mail__icon'>

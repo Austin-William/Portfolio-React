@@ -1,5 +1,6 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs, FaVuejs, FaAngular, FaAws, FaDocker, FaJava, FaBootstrap, FaJira } from 'react-icons/fa';
 import { SiFirebase, SiTailwindcss, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiConfluence, SiTypescript, SiSass, SiFlutter, SiJest, SiPostgresql, SiLess, SiHcl } from 'react-icons/si';
@@ -102,7 +103,11 @@ function Projects() {
                                             <input type="checkbox" className="checkbox__input" id={`project-${project.id}`} name={project.name} checked={id === project.id} onChange={() => setId(project.id)} />
                                             <span className="checkbox__tile">
                                                 <span className="checkbox__icon">
-                                                    <img src={require(`../${project.image}`)} alt={project.name} />
+                                                    <LazyLoadImage
+                                                        src={require(`../${project.image}`)}
+                                                        alt={project.name}
+                                                        effect='blur'
+                                                    />
                                                 </span>
                                                 <div className='checkbox-label__box'>
                                                     <span className="checkbox__label">{project.name}</span>
@@ -132,10 +137,10 @@ function Projects() {
                                 </li>
                                 <li>
                                     <span className='project__info__title'><strong>Maintained</strong> : {
-                                            projects[id - 1].maintained ? 
-                                            <span className='project__info__maintained project__info__maintained--yes'>Yes</span> : 
+                                        projects[id - 1].maintained ?
+                                            <span className='project__info__maintained project__info__maintained--yes'>Yes</span> :
                                             <span className='project__info__maintained project__info__maintained--no'>No</span>
-                                        }
+                                    }
                                     </span>
                                 </li>
                             </ul>
@@ -168,7 +173,12 @@ function Projects() {
                                 <AliceCarousel
                                     items={projects[id - 1].screenshots.map((screenshot) => {
                                         return (
-                                            <img className='project__screenshot' src={require(`../${screenshot}`)} alt={projects[id - 1].name} />
+                                            <LazyLoadImage
+                                                className='project__screenshot'
+                                                src={require(`../${screenshot}`)}
+                                                alt={projects[id - 1].name}
+                                                effect='blur'
+                                            />
                                         )
                                     }
                                     )}
