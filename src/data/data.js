@@ -3,7 +3,7 @@ const projects = [
         id: 1,
         name: "Paperwork",
         description: "An application to help non-french people to manage their french administrative paperworks. In this project, I developed the visual of most pages, the unit and integration tests and I helped to develop the mobile app and the back-end for testing and deploying the app.",
-        url: "https://paperwork-front.onrender.com/",
+        url: "https://austin-william.github.io/paperwork-front/",
         github: "https://github.com/Paperwork-EIP",
         image: "assets/projects/logos/paperwork_logo.png",
         nb_members: 7,
