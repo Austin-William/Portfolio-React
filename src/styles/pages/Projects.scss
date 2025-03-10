@@ -287,8 +287,7 @@
                     .alice-carousel__stage {
                         .project__screenshot {
                             width: 100%;
-                            aspect-ratio: 16/9;
-                            object-fit: contain;
+                            max-height: 500px;
                         }
                     }
                 }

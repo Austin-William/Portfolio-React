@@ -129,9 +129,9 @@ function Projects() {
                                 <li>
                                     <span className='project__info__title'><strong>Member(s)</strong> : {projects[id - 1].nb_members}</span>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <span className='project__info__title'><strong>Duration</strong> : {projects[id - 1].duration}</span>
-                                </li>
+                                </li> */}
                                 <li>
                                     <span className='project__info__title'><strong>Type</strong> : {projects[id - 1].type}</span>
                                 </li>
