@@ -33,7 +33,7 @@ function Profile() {
                     <a className='profile__social__link' href='https://github.com/Austin-William' target='_blank' rel='noreferrer'>
                         <img src={require('../assets/icons/github.png')} alt='github' loading='lazy' />
                     </a>
-                    <a className='profile__social__link' href='https://www.linkedin.com/in/austin-william-lo-2a75271a1/' target='_blank' rel='noreferrer'>
+                    <a className='profile__social__link' href='https://www.linkedin.com/in/austin-william-l-2a75271a1/' target='_blank' rel='noreferrer'>
                         <img src={require('../assets/icons/linkedin.png')} alt='linkedin' loading='lazy' />
                     </a>
                     <a className='profile__social__link' href="mailto:austin-william.lo@epitech.eu">
