@@ -8,8 +8,6 @@ import Experiences from './pages/Experiences';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
-import "aos/dist/aos.css";
-
 function App() {
     AOS.init();
 

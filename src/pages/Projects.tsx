@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import AliceCarousel from 'react-alice-carousel';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Mousewheel } from 'swiper/modules';
 
 import { displayTechIcons } from '../tools/Icons';
 
@@ -99,28 +100,35 @@ function Projects() {
                                 </a>
                             </div>
                             <div data-aos="fade-up" data-aos-duration="1000">
-                                <AliceCarousel
-                                    items={projects[id - 1].screenshots.map((screenshot: string) => {
-                                        return (
-                                            <LazyLoadImage
-                                                className='project__screenshot'
-                                                src={require(`../${screenshot}`)}
-                                                alt={projects[id - 1].name}
-                                                effect='blur'
-                                            />
-                                        )
+                                <Swiper
+                                    pagination={{
+                                        dynamicBullets: true,
+                                    }}
+                                    modules={[Pagination, Mousewheel]}
+                                    mousewheel={true}
+                                    slidesPerView={1}
+                                >
+                                    {
+                                        projects[id - 1].screenshots.map((screenshot: string, index: number) => {
+                                            return (
+                                                <SwiperSlide key={index}>
+                                                    <LazyLoadImage
+                                                        className='project__screenshot'
+                                                        src={require(`../${screenshot}`)}
+                                                        alt={projects[id - 1].name}
+                                                        effect='blur'
+                                                    />
+                                                </SwiperSlide>
+                                            )
+                                        })
                                     }
-                                    )}
-                                    activeIndex={0}
-                                    autoPlay={false}
-                                    controlsStrategy="alternate"
-                                />
+                                </Swiper>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
