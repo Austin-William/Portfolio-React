@@ -1,83 +1,16 @@
-import React from 'react';
+import { useState } from 'react';
 
-import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs, FaVuejs, FaAngular, FaAws, FaDocker, FaJava, FaBootstrap, FaJira } from 'react-icons/fa';
-import { SiFirebase, SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiConfluence, SiTypescript, SiSass, SiFlutter, SiJest, SiPostgresql, SiLess, SiHcl } from 'react-icons/si';
-import { TbBrandReactNative } from "react-icons/tb";
+import { displayTechIcons } from '../tools/Icons';
 
 import { experiences } from '../data/data';
 
 import "../styles/pages/Experiences.scss";
 
 function Experiences() {
-    const [indexSelectedExperience, setIndexSelectedExperience] = React.useState(0);
+    const [indexSelectedExperience, setIndexSelectedExperience] = useState(0);
 
     function changeSelectedExperience(index: number) {
         setIndexSelectedExperience(index);
-    }
-
-    function displayTechIcons(technology: string) {
-        switch (technology) {
-            case 'ReactJS':
-                return <FaReact />;
-            case 'React Native':
-                return <TbBrandReactNative />;
-            case 'AngularJS':
-                return <FaAngular />;
-            case 'NodeJS':
-                return <FaNodeJs />;
-            case 'HTML 5':
-                return <FaHtml5 />;
-            case 'CSS 3':
-                return <FaCss3 />;
-            case 'SCSS':
-                return <SiSass />;
-            case 'Javascript':
-                return <FaJs />;
-            case 'Typescript':
-                return <SiTypescript />;
-            case 'VueJS':
-                return <FaVuejs />;
-            case 'Firebase':
-                return <SiFirebase />;
-            case 'C#':
-                return <SiCsharp />;
-            case '.NET':
-                return <SiDotnet />;
-            case 'SQL Server':
-                return <SiMicrosoftsqlserver />;
-            case 'Confluence':
-                return <SiConfluence />;
-            case 'Jira':
-                return <FaJira />;
-            case 'Flutter':
-                return <SiFlutter />;
-            case 'AWS':
-                return <FaAws />;
-            case 'Docker':
-                return <FaDocker />;
-            case 'Jest':
-                return <SiJest />;
-            case 'PostgreSQL':
-                return <SiPostgresql />;
-            case 'Java':
-                return <FaJava />;
-            case 'JSTL':
-                return <FaJava />;
-            case 'Less':
-                return <SiLess />;
-            case 'HCL Commerce':
-                return <SiHcl />;
-            case 'HCL Commerce 8':
-                return <SiHcl />;
-            case 'Bootstrap':
-                return <FaBootstrap />;
-            case 'Bootstrap 3':
-                return <FaBootstrap />;
-            case 'Bootstrap 5':
-                return <FaBootstrap />;
-            default:
-                return <></>;
-        }
     }
 
     return (
@@ -95,7 +28,7 @@ function Experiences() {
                             Select an experience
                         </h2>
                         <div className='experiences__body__selects__buttons' data-aos="fade-up" data-aos-duration="1000">
-                            {experiences.map((experience, index) => (
+                            {experiences.map((experience: Record<string, any>, index: number) => (
                                 <button key={index} className={`experiences__body__selects__buttons__button ${index === indexSelectedExperience ? 'selected' : ''}`} onClick={() => changeSelectedExperience(index)}>
                                     {experience.name}
                                 </button>

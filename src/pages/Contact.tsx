@@ -1,18 +1,24 @@
-import React from 'react';
-import emailjs from '@emailjs/browser';
-
+import { ChangeEvent, FormEvent, MutableRefObject, useRef, useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 import { toast } from 'react-toastify';
+
+import emailjs from '@emailjs/browser';
 
 import "../styles/pages/Contact.scss";
 
 function Contact() {
-    const form = React.useRef() as React.MutableRefObject<HTMLFormElement>;
-    const [email, setEmail] = React.useState('');
-    const [name, setName] = React.useState('');
-    const [message, setMessage] = React.useState('');
+    const form = useRef() as MutableRefObject<HTMLFormElement>;
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+    const words = [
+        'Open to work',
+        'Motivated',
+        'Team player',
+        'Fast learner'
+    ]
 
-    function sendEmail(e: any) {
+    function sendEmail(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         if (form.current && email && name && message) {
@@ -54,13 +60,6 @@ function Contact() {
         }
     }
 
-    const words = [
-        'Open to work',
-        'Motivated',
-        'Team player',
-        'Fast learner'
-    ]
-
     return (
         <div className='contact' id="contact">
             <div className='animation a1 contact__title' data-aos="fade-up" data-aos-duration="1400">
@@ -69,7 +68,7 @@ function Contact() {
             <div className='container'>
                 <ul className='left'>
                     {
-                        words.map((word, index) => (
+                        words.map((word: string, index: number) => (
                             <div data-aos="fade-up" data-aos-duration="1500" key={index} >
                                 <li className='animation a2'>
                                     <GoCheckCircle className='contact__icon' />
@@ -83,15 +82,15 @@ function Contact() {
                     <form className='contact__form' ref={form} onSubmit={sendEmail}>
                         <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a2' htmlFor="email">Email</label>
-                            <input className='animation a3' type="email" name="email" id="email" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} />
+                            <input className='animation a3' type="email" name="email" id="email" placeholder="Email Address" onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
                         </div>
                         <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a4' htmlFor="name">Name</label>
-                            <input className='animation a5' type='text' name="name" id="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+                            <input className='animation a5' type='text' name="name" id="name" placeholder="Name" onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)} />
                         </div>
                         <div className='contact__input' data-aos="fade-up" data-aos-duration="1500">
                             <label className='animation a6' htmlFor="message">Message</label>
-                            <textarea className='animation a7' name="message" id="message" placeholder="Your message" onChange={(e) => setMessage(e.target.value)} />
+                            <textarea className='animation a7' name="message" id="message" placeholder="Your message" onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)} />
                         </div>
                         <div className='contact__submit' data-aos="fade-up" data-aos-duration="2000">
                             <input className='animation a6 contact__submit__button' type="submit" value="Send" />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdOutlineMail } from 'react-icons/md';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
