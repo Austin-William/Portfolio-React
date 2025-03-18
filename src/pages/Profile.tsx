@@ -21,7 +21,7 @@ function Profile() {
                         Austin-William Lo
                     </h1>
                     <h2 className='profile__title__description' data-aos="fade-up" data-aos-duration="1500">
-                        A Full-stack Developer
+                        Full-stack Developer
                     </h2>
                 </div>
                 <div className='profile__description'>
