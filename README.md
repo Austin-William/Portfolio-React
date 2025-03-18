@@ -16,7 +16,7 @@ Discover the online portfolio: [link here](https://austin-william.github.io/Port
 - Animated transitions: CSS animations for a smooth user experience
 
 ## Technologies Used
-- ReactJS
+- React Typescript
 - SCSS
 - EmailJS
 - Github Page for deployment
