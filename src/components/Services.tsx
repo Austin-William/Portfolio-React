@@ -1,4 +1,3 @@
-import React from 'react';
 import { MdMobileFriendly, MdWeb } from 'react-icons/md';
 import { FaServer } from 'react-icons/fa';
 import { SiTestcafe } from 'react-icons/si';
@@ -8,8 +7,6 @@ import { services } from '../data/data';
 import "../styles/components/Services.scss";
 
 function Services() {
-    
-
     function displayIcon(icon: string) {
         switch (icon) {
             case "web":
