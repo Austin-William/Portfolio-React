@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 import "../styles/components/Navbar.scss";
 
 function Navbar() {
-    const [isShrunk, setShrunk] = React.useState(false);
+    const [isShrunk, setShrunk] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 0) {
                 setShrunk(true);
