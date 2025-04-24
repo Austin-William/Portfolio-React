@@ -24,7 +24,7 @@ function Navbar() {
                         <a href="#profile" className='link'>About me</a>
                         <a href="#experiences" className='link'>Experiences</a>
                         <a href="#projects" className='link'>Projects</a>
-                        <a href="#contact" className='link'>Contact Me</a>
+                        <a href="#contact" className='link'>Contact me</a>
                     </div>
                 </div>
             </div>
