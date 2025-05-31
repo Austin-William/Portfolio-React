@@ -252,6 +252,32 @@
         "Typescript",
         "Weather API"
       ]
+    },
+    {
+      "id": 10,
+      "name": "Simple E-commerce website",
+      "description": "A project to simulate an e-commerce website with a back-end and a front-end. The goal of this project was to learn to learn Angular and to develop a full-stack app.",
+      "url": "https://prominent-ferdinanda-austin-william-154ee239.koyeb.app/",
+      "github": "https://github.com/Austin-William/bingsu-project",
+      "image": "assets/projects/logos/bingsu_logo.jpg",
+      "nb_members": 1,
+      "duration": "1 week",
+      "type": "Personal project",
+      "maintained": false,
+      "screenshots": [
+        "assets/projects/bingsu_project/1.png",
+        "assets/projects/bingsu_project/2.png",
+        "assets/projects/bingsu_project/3.png"
+      ],
+      "technologies": [
+        "Angular",
+        "Typescript",
+        "HTML 5",
+        "SCSS",
+        "Node.JS",
+        "Rest API",
+        "Koyeb"
+      ]
     }
   ]
 }

@@ -98,7 +98,8 @@
                     align-items: center;
                     gap: 0 0.5rem;
                     width: 150px;
-                    height: 60px;
+                    min-height: 60px;
+                    padding: 0.3rem 0.5rem;
                     border-radius: 10px;
                     color: $font-color-not-selected;
                     border: 1px solid $color-background-2;
