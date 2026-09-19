@@ -1,0 +1,24 @@
+{
+  "services_data": [
+    {
+      "title": "Front",
+      "description": "React, Angular, NextJS, HTML 5 / CSS 3 and Javascript / Typescript are my main skills.",
+      "icon": "web"
+    },
+    {
+      "title": "Mobile",
+      "description": "React Native and Flutter.",
+      "icon": "mobile"
+    },
+    {
+      "title": "Server",
+      "description": "Node.JS, ExpressJS, JSTL and Java.",
+      "icon": "server"
+    },
+    {
+      "title": "Testing",
+      "description": "Unit testing and integration testing with Jest.",
+      "icon": "testing"
+    }
+  ]
+}

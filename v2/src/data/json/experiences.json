@@ -1,0 +1,104 @@
+{
+  "experiences_data": [
+    {
+      "id": 1,
+      "name": "Linagora",
+      "description": "A website to create and manage different type of CV with different templates.",
+      "year": "2020",
+      "technologies": [
+        "React",
+        "VueJS",
+        "HTML 5",
+        "CSS 3",
+        "Javascript",
+        "Firebase"
+      ],
+      "missions": [
+        "Create design of the architecture of an online CV generator",
+        "Find the best technologies to use for the project",
+        "Create and develop of its interface as well as its functionalities"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Natixis",
+      "description": "Redesign and add new features to a home page regrouping some applications of the company",
+      "year": "2022",
+      "technologies": [
+        "Angular",
+        "Javascript",
+        "C#",
+        ".NET",
+        "HTML 5",
+        "CSS 3",
+        "SQL Server",
+        "Confluence"
+      ],
+      "missions": [
+        "Redesign a home page regrouping some applications of the company for a better visual",
+        "Add new user settings to filter application user permissions",
+        "Add new features to centralize different types of events (alerts, notifications, ...)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Paperwork",
+      "description": "A web app and a mobile app to help you to manage your french administrative paperworks.",
+      "year": "2022 - 2024",
+      "technologies": [
+        "React",
+        "Typescript",
+        "Next.JS",
+        "HTML 5",
+        "SCSS",
+        "Node.JS",
+        "Flutter",
+        "React Native",
+        "AWS",
+        "Docker",
+        "Jest",
+        "PostgreSQL"
+      ],
+      "missions": [
+        "Develop the welcome page, login and register screen in the web app with React Typescript/SCSS",
+        "Develop the mobile app with React Native",
+        "Develop features of the back-office with Next.JS to manage the users and the paperworks",
+        "Develop a part of the logic of the server with Node.Js",
+        "Develop the tests for the front-end, back-end and mobile app",
+        "Help to develop the mobile app with Flutter and the back-end with Node.JS",
+        "Testing the app to find the bugs and to ensure the quality of the app with Jest",
+        "Deployement of the app on AWS"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Ecocea Technologies - Manutan",
+      "description": "An E-commerce website to sell products for companies.",
+      "year": "2023 - now",
+      "technologies": [
+        "Javascript",
+        "HTML 5",
+        "CSS 3",
+        "JSTL",
+        "Java",
+        "Less",
+        "HCL Commerce 8",
+        "Bootstrap 3",
+        "Jira"
+      ],
+      "missions": [
+        "Maintain the e-commerce website",
+        "Develop new features",
+        "Cost estimation of the new features",
+        "Rework the website to improve the performance and the design from Figma mockups",
+        "Report the bugs and fix them in production",
+        "Demonstrate all new/modified features to the client",
+        "Implement Google reCaptcha V2",
+        "Implement tracking tools to monitor the website's performance and the user's behavior with Google Analytics and Google Tag Manager",
+        "Create the documentation to maintain and to develop the website for developers",
+        "Writing conception documents for the new features to check if the feature is possible to develop and to estimate the cost",
+        "Contact the client to understand his needs and his feedbacks about the website"
+      ]
+    }
+  ]
+}
