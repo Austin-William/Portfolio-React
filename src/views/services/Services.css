@@ -1,0 +1,73 @@
+.playground-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(14, 28, 54, .08) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 28, 54, .08) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  background-position: 50% 0;
+}
+
+.playground-section::before {
+  content: '';
+  position: absolute;
+  top: 6rem;
+  right: 8%;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid rgba(175, 203, 255, .9);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.playground-heading,
+.playground-section .service-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(14, 28, 54, .2);
+}
+
+.service {
+  min-height: 230px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--paper);
+}
+
+.service:nth-child(2) { background: var(--acid); }
+.service:nth-child(3) { background: var(--warm); }
+.service:nth-child(4) { background: var(--cool); }
+
+.service strong {
+  color: var(--ink);
+  font: 3rem var(--display-font);
+}
+
+.service-content {
+  min-height: 7.5rem;
+}
+
+.service h3 {
+  min-height: 1.7rem;
+  margin: 1rem 0 .5rem;
+  font: 1.52rem var(--body-font);
+  letter-spacing: .02em;
+}
+
+.service p {
+  margin: 0;
+  font: 1rem/1.75 var(--body-font);
+}
+
+@media (max-width: 700px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}

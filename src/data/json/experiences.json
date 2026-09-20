@@ -74,7 +74,7 @@
       "id": 4,
       "name": "Ecocea Technologies - Manutan",
       "description": "An E-commerce website to sell products for companies.",
-      "year": "2023 - now",
+      "year": "2023 - 2024",
       "technologies": [
         "Javascript",
         "HTML 5",
@@ -98,6 +98,31 @@
         "Create the documentation to maintain and to develop the website for developers",
         "Writing conception documents for the new features to check if the feature is possible to develop and to estimate the cost",
         "Contact the client to understand his needs and his feedbacks about the website"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Carrick-Skills",
+      "description": "A company specializing in the development of orchestration and process automation solutions for the media industry",
+      "year": "2025 - now",
+      "technologies": [
+        "Angular 17",
+        "Typescript",
+        "Java 17 Spring Boot",
+        "MySQL",
+        "Docker",
+        "Bootstrap 3",
+        "AWS",
+        "Jira"
+      ],
+      "missions": [
+        "Maintain the e-commerce website",
+        "Create new connectors with APIs to integrate new services",
+        "Create the documentation to maintain and to develop the website for developers",
+        "Dockerize the application to deploy it on a server",
+        "Implement new features to improve the application",
+        "Manage the application on AWS to ensure its availability and performance",
+        "Contact the client to understand his needs and his feedbacks about the application"
       ]
     }
   ]

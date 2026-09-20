@@ -43,7 +43,6 @@
         "Docker",
         "Jest",
         "AWS",
-        "Flutter",
         "React Native",
         "SonarCloud"
       ]
@@ -51,7 +50,7 @@
     {
       "id": 2,
       "name": "Area",
-      "description": "A web app to manage your different account in one app thanks to the API of the different services (Discord, Twitter, ...). This project is the latest and biggest project during my 3rd years at Epitech. We had to develop a full-stack app with a team of 6 people in 2 months at the same time of other projects. It regroups all the knowledge that we learned during the year.",
+      "description": "A web app to manage your different account in one app thanks to the API of the different services (Discord, Twitter, ...). The goal of this project was to develop a full-stack app with a team of 6 people in 2 months at the same time of other projects.",
       "url": "",
       "github": "https://github.com/Austin-William/Area",
       "image": "assets/projects/logos/area_logo.jpg",
@@ -145,7 +144,7 @@
       "description": "A story game made in Javascript which the end will depend on the user's choices. This game was made during a game jam.",
       "url": "https://austin-william.github.io/JAM-Epitech-2022/",
       "github": "https://github.com/Austin-William/JAM-Epitech-2022",
-      "image": "assets/projects/logos/game_jam_2022_logo.PNG",
+      "image": "",
       "nb_members": 3,
       "duration": "2 days",
       "type": "School project",
@@ -214,7 +213,7 @@
     {
       "id": 8,
       "name": "Food Wheel",
-      "description": "My first Next.JS project.",
+      "description": "My first Next.JS project. A website to display a wheel of food. The goal of this project was to learn Next.JS and TailwindCSS. I made this project because I couldn't decide what to eat and I wanted to make a wheel of food to choose randomly.",
       "url": "https://food-wheel-henna.vercel.app/",
       "github": "https://github.com/Austin-William/food-wheel",
       "image": "assets/projects/logos/food_wheel_logo.png",
@@ -234,7 +233,7 @@
     {
       "id": 9,
       "name": "Weather App",
-      "description": "A weather app made with React and Weather API.",
+      "description": "A weather app made with React and Weather API. I made this app to know the weather in different cities. and to practice React and Typescript. with API calls.",
       "url": "https://austin-william.github.io/weather-app/",
       "github": "https://github.com/Austin-William/weather-app",
       "image": "assets/projects/logos/weather_logo.png",
@@ -256,7 +255,7 @@
     {
       "id": 10,
       "name": "Simple E-commerce website",
-      "description": "A project to simulate an e-commerce website with a back-end and a front-end. The goal of this project was to learn to learn Angular and to develop a full-stack app.",
+      "description": "A project to simulate an e-commerce website with a back-end and a front-end. The goal of this project was to learn Angular and to develop a full-stack app.",
       "url": "https://prominent-ferdinanda-austin-william-154ee239.koyeb.app/",
       "github": "https://github.com/Austin-William/bingsu-project",
       "image": "assets/projects/logos/bingsu_logo.jpg",

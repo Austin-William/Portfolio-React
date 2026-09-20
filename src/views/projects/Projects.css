@@ -1,0 +1,459 @@
+.project-grid {
+  display: flex;
+  width: 100%;
+  transition: transform .65s cubic-bezier(.2, .8, .2, 1);
+}
+
+.project-grid.no-transition {
+  transition: none;
+}
+
+.project-slider {
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.project-grid .project-card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.project-card {
+  height: 74rem;
+  min-height: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--card);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .2);
+}
+
+.project-card-1,
+.project-card-5,
+.project-card-9 {
+  --card: #dce8ff;
+}
+
+.project-card-2,
+.project-card-6,
+.project-card-10 {
+  --card: #fff5ec;
+}
+
+.project-card-3,
+.project-card-7 {
+  --card: #e8fbff;
+}
+
+.project-card-4,
+.project-card-8 {
+  --card: #fffef8;
+}
+
+.project-progress {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  font: .72rem var(--body-font);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-progress > span {
+  opacity: .6;
+}
+
+.project-progress-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .5rem 1rem;
+}
+
+.project-progress button {
+  border: 0;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  opacity: .45;
+  transition: opacity .2s ease;
+}
+
+.project-progress button.active,
+.project-progress button:hover,
+.project-progress button:focus-visible {
+  opacity: 1;
+}
+
+.project-progress button span {
+  margin-right: .35rem;
+  opacity: .6;
+}
+
+.project-slider-controls {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: .75rem;
+  padding: .25rem 0;
+  font: .75rem var(--body-font);
+  letter-spacing: .1em;
+}
+
+.project-slider-controls button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--paper);
+  color: var(--paper);
+  background: transparent;
+  cursor: pointer;
+  font: 1.2rem var(--body-font);
+}
+
+.project-slider-controls button:hover,
+.project-slider-controls button:focus-visible {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.project-card-top,
+.project-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font: .75rem var(--body-font);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.project-card-top {
+  min-height: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.project-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 7rem;
+  flex: 0 0 7rem;
+  margin-top: 1.5rem;
+}
+
+.project-heading-empty {
+  justify-content: flex-start;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 4.3rem);
+  line-height: .98;
+  letter-spacing: -.03em;
+  font-family: var(--display-font);
+  font-weight: 400;
+}
+
+.project-card p {
+  height: 5rem;
+  flex: 0 0 5rem;
+  overflow-y: auto;
+  margin: 1.5rem 0 0;
+  padding-right: .5rem;
+  font: 1rem/1.75 var(--body-font);
+}
+
+.project-details {
+  height: 5rem;
+  flex: 0 0 5rem;
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0 0;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(14, 28, 54, .25);
+  border-bottom: 1px solid rgba(14, 28, 54, .25);
+}
+
+.project-details div {
+  flex: 1;
+}
+
+.project-details dt,
+.project-label {
+  margin-bottom: .5rem;
+  font: .72rem var(--body-font);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+.project-details dd {
+  margin: 0;
+  font: .95rem var(--body-font);
+}
+
+.project-links {
+  flex: 0 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  padding: .55rem .7rem;
+  border: 1px solid currentColor;
+  color: inherit;
+  font: .8rem var(--body-font);
+  text-decoration: none;
+  transition: color .25s ease, background .25s ease;
+}
+
+.project-links a:hover {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.project-technologies,
+.project-gallery {
+  margin-top: 1.5rem;
+}
+
+.project-technologies {
+  flex: 0 0 5.5rem;
+  overflow: hidden;
+}
+
+.project-gallery {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.project-technologies .tag-list {
+  max-height: 4.5rem;
+  overflow-y: auto;
+  margin-top: .65rem;
+}
+
+.project-gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font: .75rem var(--body-font);
+  margin-top: .65rem;
+}
+
+.screenshot-carousel {
+  position: relative;
+  min-height: 32rem;
+  flex: 1 1 auto;
+  height: auto;
+  margin-top: .65rem;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid rgba(14, 28, 54, .2);
+}
+
+.screenshot-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.screenshot-trigger {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.carousel-controls {
+  position: absolute;
+  right: .65rem;
+  bottom: 1.5rem;
+  display: flex;
+  gap: .35rem;
+}
+
+.carousel-controls button {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--paper);
+  font: 1rem var(--body-font);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 7rem;
+  background: rgba(14, 28, 54, .94);
+}
+
+.lightbox > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-close,
+.lightbox-arrow {
+  position: absolute;
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid var(--paper);
+  color: var(--paper);
+  background: transparent;
+  font: 1.4rem var(--body-font);
+  cursor: pointer;
+}
+
+.lightbox-close { top: 1.5rem; right: 1.5rem; }
+.lightbox-previous { left: 1.5rem; }
+.lightbox-next { right: 1.5rem; }
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.project-image {
+  display: block;
+  flex: 0 0 7rem;
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+}
+
+.project-heading-empty::before {
+  content: '';
+  flex: 0 0 7rem;
+  width: 7rem;
+  height: 7rem;
+}
+
+.technology-tag {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(14, 28, 54, .25) !important;
+  background: rgba(249, 251, 242, .28);
+}
+
+.technology-tag:nth-child(4n + 1) { background: rgba(175, 203, 255, .34); }
+.technology-tag:nth-child(4n + 2) { background: rgba(215, 249, 255, .45); }
+.technology-tag:nth-child(4n + 3) { background: rgba(255, 237, 225, .42); }
+
+.technology-icon {
+  display: block;
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: 0 0 1.45rem;
+  padding: .25rem;
+  place-items: center;
+  border: 1px solid rgba(14, 28, 54, .18);
+  border-radius: 50%;
+  color: var(--ink);
+  background: rgba(249, 251, 242, .7);
+  transition: transform .2s ease, color .2s ease;
+}
+
+.project-arrow {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .project-progress {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-progress-links {
+    justify-content: flex-start;
+  }
+
+  .project-card {
+    height: 82rem;
+    min-height: 0;
+  }
+
+  .project-image {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .project-heading {
+    height: 7rem;
+    flex-basis: 7rem;
+  }
+
+  .project-card p {
+    height: 7rem;
+    flex-basis: 7rem;
+  }
+
+  .screenshot-carousel {
+    min-height: 26rem;
+  }
+
+  .lightbox {
+    padding: 4rem 1rem;
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .lightbox-previous { left: 1rem; }
+  .lightbox-next { right: 1rem; }
+
+  .project-technologies .tag-list {
+    height: 14rem;
+    max-height: none;
+    overflow-y: auto;
+    align-content: flex-start;
+  }
+
+  .project-technologies {
+    flex-basis: 15.5rem;
+    overflow: visible;
+  }
+}

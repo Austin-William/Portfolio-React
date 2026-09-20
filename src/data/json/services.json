@@ -7,17 +7,17 @@
     },
     {
       "title": "Mobile",
-      "description": "React Native and Flutter.",
+      "description": "React Native.",
       "icon": "mobile"
     },
     {
       "title": "Server",
-      "description": "Node.JS, ExpressJS, JSTL and Java.",
+      "description": "Node.JS, ExpressJS, JSTL and Java 8 and Java Spring Boot.",
       "icon": "server"
     },
     {
       "title": "Testing",
-      "description": "Unit testing and integration testing with Jest.",
+      "description": "Unit testing and integration testing with Jest (TS projects).",
       "icon": "testing"
     }
   ]
