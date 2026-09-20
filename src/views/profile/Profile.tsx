@@ -1,9 +1,11 @@
 import { useRef } from 'react'
+import { FaCheck, FaXmark } from 'react-icons/fa6'
 
 import './Profile.css'
 
 export function Profile() {
   const heroRef = useRef<HTMLElement>(null)
+  const available = false
 
   const handlePointerMove = (event: React.PointerEvent<HTMLElement>) => {
     const hero = heroRef.current
@@ -40,7 +42,13 @@ export function Profile() {
         </div>
       </div>
       <div className="hero-foot reveal">
-        <p>I turn complex ideas into clear, fast digital experiences with an eye for detail.</p>
+        <div className="hero-foot-copy">
+          <p>I turn complex ideas into clear, fast digital experiences with an eye for detail.</p>
+          <div className={`availability-status ${available ? 'is-available' : 'is-unavailable'}`} role="status">
+            {available ? <FaCheck aria-hidden="true" /> : <FaXmark aria-hidden="true" />}
+            <span>{available ? 'Available for new projects' : 'Currently unavailable'}</span>
+          </div>
+        </div>
         <span className="scroll-cue">↓ Scroll to explore</span>
       </div>
     </section>

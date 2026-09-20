@@ -21,7 +21,7 @@
   background-image: linear-gradient(rgba(14, 28, 54, .12) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 28, 54, .12) 1px, transparent 1px);
   background-size: 4rem 4rem;
   mask-image: linear-gradient(to bottom, black, transparent 75%);
-  animation: hero-grid-drift 18s linear infinite;
+  animation: hero-grid-drift 8s linear infinite;
 }
 
 .hero-doodles {
@@ -137,6 +137,34 @@
   margin: 0;
 }
 
+.hero-foot-copy {
+  display: grid;
+  gap: .9rem;
+}
+
+.availability-status {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  line-height: 1; 
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.availability-status svg {
+  display: block;
+  flex: 0 0 auto;
+  font-size: .85rem;
+}
+
+.availability-status.is-available {
+  color: #16803c;
+}
+
+.availability-status.is-unavailable {
+  color: #c62828;
+}
+
 .scroll-cue {
   display: inline-block;
   font-size: .72rem;
@@ -188,7 +216,11 @@
   .hero-intro {
     align-items: flex-start;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
+  }
+
+  .hero-v2 h1 {
+    margin-bottom: .5rem;
   }
 
   .profile-photo {
